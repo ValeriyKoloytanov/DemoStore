@@ -1,0 +1,26 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<AppUser> SignInManager
+@inject UserManager<AppUser> UserManager
+
+@if (User.Identity.IsAuthenticated)
+{
+    <li>
+        <a asp-controller="Profile" asp-action="Index"><span data-uk-icon="icon: info"></span> info</a>
+    </li>
+    <li class="nav-item">
+        <form class="form-inline" asp-controller="Account" asp-action="Logout"  method="post" >
+            <button type="submit" class="uk-button uk-button-default uk-button-small">Logout</button>
+        </form>
+    </li>
+}
+else
+{
+  <li>
+      <a class="uk-link-text" id="loginLink" asp-controller="Account" asp-action="Login">Log in</a>
+      </li>
+    <li>
+      <a class="uk-link-text" id="registerLink" asp-controller="Account" asp-action="Register">Register</a>
+    </li>
+
+}

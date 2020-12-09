@@ -1,0 +1,39 @@
+﻿@model Product
+
+<br>
+<div class="uk-container">
+    <hr class="uk-divider-icon">
+    <h3 class="uk-text-center"> Profile Overwiew</h3>
+    <a class="uk-icon-button  uk-margin-big-right" uk-icon="arrow-left"
+       asp-controller="home" asp-action="index"></a>
+    <div class="uk-margin">
+        <p> Email:@Context.User.Identity.Name</p>
+    </div>
+
+    <table class="uk-table uk-table-divider">
+        <thead>
+        <tr>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+        </tbody>
+    </table>
+</div>    
