@@ -19,7 +19,7 @@ namespace GroceryStore2.Models
       {
         return _appDbContext.Products
         .OrderBy(p => p.Name)
-        .Include(c => c.Category);
+        .Include(c => c.Category).ToList();
       }
     }
     public IEnumerable<Product> FeaturedProducts

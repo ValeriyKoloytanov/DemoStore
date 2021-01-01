@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- UIkit CSS -->
+    <link href="~/styles.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/css/uikit.min.css"/>
+    <title>Grocery Store</title>
+</head>
+
+<body>
+<div class="uk-offcanvas-content">
+<!--HEADER-->
+ <header>
+      <div class="uk-container">
+        <nav class="uk-navbar-transparent" data-uk-navbar>
+          <div class="uk-navbar-left">
+            <a class="uk-navbar-item uk-logo" asp-area="" asp-controller="Home" asp-action="Index">
+              <img src="~/img/logo.jpg" alt="logo">
+            </a>
+          </div>
+          <div class="uk-navbar-center uk-visible@s">
+            <ul class="uk-navbar-nav">
+              <li>
+                <a href="#">Tools
+                  <span data-uk-icon="icon: triangle-down"></span>
+                </a>
+                <div class="uk-navbar-dropdown">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li>
+                      <a asp-controller="Product" asp-action="ManageContent">Manage content</a>
+                    </li>
+                    <li>
+                      <a asp-controller="Product" asp-action="List" asp-route-category="Vegetables">Vegetables</a>
+                    </li>
+                    <li>
+                      <a asp-controller="Product" asp-action="List" asp-route-category="Drinks">Drinks</a>
+                    </li>
+                    <li>
+                      <a asp-controller="Product" asp-action="List" asp-route-category="">All</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a asp-controller="Contact"
+                   asp-action="Index"
+                >Contact</a>
+              </li>
+              <li>
+                @await Component.InvokeAsync("ShoppingCartSummary")
+              </li>
+              </ul>
+          </div></nav></div>
+ </header>
+<!--/HEADER-->
+
+<div>
+    @RenderBody()
+
+</div>
+
+
+<hr class="uk-divider-icon">
+<!--FOOTER-->
+<footer>
+</footer>
+<!--/FOOTER-->
+
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/js/uikit-icons.min.js"></script>
+
+@RenderSection("scripts", required: false)
+</div>
+
+</body>
+</html>

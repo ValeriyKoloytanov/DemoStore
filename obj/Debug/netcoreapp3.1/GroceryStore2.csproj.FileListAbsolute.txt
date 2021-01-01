@@ -97,7 +97,6 @@ C:\Users\Валерий\Desktop\shopC#\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft
 C:\Users\Валерий\Desktop\shopC#\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Валерий\Desktop\shopC#\obj\Debug\netcoreapp3.1\staticwebassets\GroceryStore2.StaticWebAssets.Manifest.cache
 C:\Users\Валерий\Desktop\shopC#\obj\Debug\netcoreapp3.1\staticwebassets\GroceryStore2.StaticWebAssets.xml
-C:\Users\Валерий\Desktop\shopC#\obj\Debug\netcoreapp3.1\scopedcss\bundle\GroceryStore2.styles.css
 C:\Users\Валерий\Desktop\shopC#\obj\Debug\netcoreapp3.1\GroceryStore2.TagHelpers.input.cache
 C:\Users\Валерий\Desktop\shopC#\obj\Debug\netcoreapp3.1\GroceryStore2.TagHelpers.output.cache
 C:\Users\Валерий\Desktop\shopC#\obj\Debug\netcoreapp3.1\GroceryStore2.RazorCoreGenerate.cache
@@ -149,3 +148,8 @@ C:\Users\Валерий\Desktop\shopC#\bin\Debug\netcoreapp3.1\Microsoft.EntityF
 C:\Users\Валерий\Desktop\shopC#\bin\Debug\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.Design.dll
 C:\Users\Валерий\Desktop\shopC#\obj\Debug\netcoreapp3.1\Razor\Views\Profile\Index.cshtml.g.cs
 C:\Users\Валерий\Desktop\shopC#\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductDetail.cshtml.g.cs
+C:\Users\Валерий\Desktop\shopC#\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\Валерий\Desktop\shopC#\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutDashboard.cshtml.g.cs
+C:\Users\Валерий\Desktop\shopC#\obj\Debug\netcoreapp3.1\scopedcss\bundle\GroceryStore2.styles.css
+C:\Users\Валерий\Desktop\shopC#\obj\Debug\netcoreapp3.1\Razor\Views\Product\ManageContent.cshtml.g.cs
+C:\Users\Валерий\Desktop\shopC#\obj\Debug\netcoreapp3.1\Razor\Views\Product\Get_Product.cshtml.g.cs

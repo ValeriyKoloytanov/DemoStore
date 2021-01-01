@@ -11,6 +11,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.10">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
@@ -28,17 +29,23 @@
     <Compile Remove="Migrations\20201126175004_mymigration.Designer.cs" />
     <Compile Remove="preview\**" />
     <Compile Remove="Controllers\Profile.cs" />
+    <Compile Remove="Pages\**" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="README.md" />
     <None Remove=".gitignore" />
     <None Remove="preview\**" />
+    <None Remove="Pages\**" />
+    <None Include="wwwroot\styles.css" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="preview\**" />
+    <EmbeddedResource Remove="Pages\**" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="preview\**" />
     <Content Remove="Views\Product\DetailsPage.cshtml" />
+    <Content Remove="Pages\**" />
+    <Content Remove="Views\Dashboard\Content_managment.cshtml" />
   </ItemGroup>
  </Project>

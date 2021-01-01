@@ -12,52 +12,93 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7569fbdc-3dc0-465f-9372-d0e387e12b6e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.vs/GroceryStore2/v16/.suo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/Dashboard.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/Dashboard/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/Shared/_LayoutDashboard.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GroceryStore2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroceryStore2/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GroceryStore2/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroceryStore2/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GroceryStore2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroceryStore2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/ProductController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ProductController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore2.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore2.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/ProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/ProductRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Product/ProductDetail.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Product/ProductDetail.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Shared/ProductCard.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/ProductCard.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GroceryStore2.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GroceryStore2.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GroceryStore2.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GroceryStore2.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GroceryStore2.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GroceryStore2.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GroceryStore2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GroceryStore2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GroceryStore2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GroceryStore2.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GroceryStore2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GroceryStore2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.RazorCoreGenerate.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Razor/Views/Product/ProductDetail.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Razor/Views/Product/ProductDetail.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Razor/Views/Shared/ProductCard.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Razor/Views/Shared/ProductCard.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/GroceryStore2.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/GroceryStore2.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Views/Product/DetailsPage.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/FBEFA42B-A2E6-4C44-97E9-579677415DBC/1D/UserManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Migrations/20201126142107_mymigration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Migrations/20201126173218_mymigration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Migrations/20201126142107_mymigration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Views/Dashboard/Content_managment.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Views/Product/DetailsPage.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/appsettings.json" />
-        <option value="$PROJECT_DIR$/Migrations/AppDbContextModelSnapshot.cs" />
-        <option value="$PROJECT_DIR$/Models/AppDbContext.cs" />
-        <option value="$PROJECT_DIR$/GroceryStore2.csproj" />
-        <option value="$PROJECT_DIR$/Views/Account/Login.cshtml" />
-        <option value="$PROJECT_DIR$/Models/OrderRespository.cs" />
-        <option value="$PROJECT_DIR$/Controllers/ShoppingCartController.cs" />
-        <option value="$PROJECT_DIR$/Views/ShoppingCart/Index.cshtml" />
-        <option value="$PROJECT_DIR$/Models/ShoppingCart.cs" />
-        <option value="$PROJECT_DIR$/Controllers/Profile.cs" />
-        <option value="$PROJECT_DIR$/Views/Account/Profile/Index.cshtml" />
-        <option value="$PROJECT_DIR$/Startup.cs" />
-        <option value="$PROJECT_DIR$/Controllers/ProfileController.cs" />
-        <option value="$PROJECT_DIR$/ViewModels/ShoppingCartViewModel.cs" />
-        <option value="$PROJECT_DIR$/Site.css" />
-        <option value="$PROJECT_DIR$/Views/Order/Checkout.cshtml" />
-        <option value="$PROJECT_DIR$/Views/Profile/Index.cshtml" />
-        <option value="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" />
-        <option value="$PROJECT_DIR$/Views/Shared/_LoginPartial.cshtml" />
-        <option value="$PROJECT_DIR$/Controllers/AccountController.cs" />
-        <option value="$PROJECT_DIR$/ViewModels/LoginViewModel.cs" />
-        <option value="$PROJECT_DIR$/Views/Product/DetailsPage.cshtml" />
-        <option value="$PROJECT_DIR$/Views/Product/ProductDetail.cshtml" />
-        <option value="$PROJECT_DIR$/Views/Shared/ProductCard.cshtml" />
-        <option value="$PROJECT_DIR$/Controllers/ProductController.cs" />
-      </list>
-    </option>
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Views/Dashboard/Index.cshtml" />
+      <option value="$PROJECT_DIR$/Views/Dashboard/Content_managment.cshtml" />
+      <option value="$PROJECT_DIR$/styles.css" />
+      <option value="$PROJECT_DIR$/wwwroot/styles.css" />
+      <option value="$PROJECT_DIR$/Views/Dashboard/MananageContent.cshtml" />
+      <option value="$PROJECT_DIR$/Models/ProductRepository.cs" />
+      <option value="$PROJECT_DIR$/Views/Dashboard/ManageContent.cshtml" />
+      <option value="$PROJECT_DIR$/Views/Shared/_LayoutDashboard.cshtml" />
+      <option value="$PROJECT_DIR$/Controllers/Dashboard.cs" />
+      <option value="$PROJECT_DIR$/Views/Product/EditListing.cshtml" />
+      <option value="$PROJECT_DIR$/Models/Product.cs" />
+      <option value="$PROJECT_DIR$/Models/CommonProductModel.cs" />
+      <option value="$PROJECT_DIR$/Controllers/ProductController.cs" />
+      <option value="$PROJECT_DIR$/ViewModels/CommonProductModel.cs" />
+      <option value="$PROJECT_DIR$/Views/Product/Get_Product.cshtml" />
+      <option value="$PROJECT_DIR$/Views/Product/ManageContent.cshtml" />
+    </changedPaths>
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -74,13 +115,14 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="postgresql" />
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3503801" />
-    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.2999309" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3502052" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="PVS-Studio.Settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.GroceryStore2: empty">
@@ -159,7 +201,31 @@
       <workItem from="1607365229806" duration="7384000" />
       <workItem from="1607414976468" duration="15757000" />
       <workItem from="1607528764389" duration="5262000" />
-      <workItem from="1607535256101" duration="690000" />
+      <workItem from="1607535256101" duration="2738000" />
+      <workItem from="1607581191645" duration="2674000" />
+      <workItem from="1607787064388" duration="1032000" />
+      <workItem from="1608021183685" duration="881000" />
+      <workItem from="1608224538602" duration="5950000" />
+      <workItem from="1608272744406" duration="1633000" />
+      <workItem from="1608812712144" duration="8383000" />
+      <workItem from="1608878625504" duration="1764000" />
+      <workItem from="1608880693725" duration="758000" />
+      <workItem from="1608963455575" duration="482000" />
+      <workItem from="1608976732674" duration="10894000" />
+      <workItem from="1609006046663" duration="18880000" />
+      <workItem from="1609140157342" duration="10535000" />
+      <workItem from="1609249610618" duration="14107000" />
+      <workItem from="1609314294162" duration="2643000" />
+      <workItem from="1609317307882" duration="1726000" />
+      <workItem from="1609319085983" duration="4672000" />
+      <workItem from="1609325046854" duration="1038000" />
+      <workItem from="1609326116040" duration="1742000" />
+      <workItem from="1609327896570" duration="11535000" />
+      <workItem from="1609398906283" duration="2343000" />
+      <workItem from="1609402629887" duration="10433000" />
+      <workItem from="1609433563521" duration="6135000" />
+      <workItem from="1609497995748" duration="594000" />
+      <workItem from="1609502018928" duration="3069000" />
     </task>
     <servers />
   </component>
@@ -217,149 +283,13 @@
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="205" y="254" key="#SQL_Dialects" timestamp="1606400715861">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="205" y="254" key="#SQL_Dialects/0.0.1536.824@0.0.1536.824" timestamp="1606400715861" />
-    <state x="447" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606459818091">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="447" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1606459818091" />
-    <state width="1493" height="212" key="GridCell.Tab.0.bottom" timestamp="1607535221292">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="212" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607535221292" />
-    <state width="1493" height="212" key="GridCell.Tab.0.center" timestamp="1607535221292">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="212" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607535221292" />
-    <state width="1493" height="212" key="GridCell.Tab.0.left" timestamp="1607535221292">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="212" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607535221292" />
-    <state width="1493" height="212" key="GridCell.Tab.0.right" timestamp="1607535221292">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="212" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607535221292" />
-    <state width="1478" height="285" key="GridCell.Tab.1.bottom" timestamp="1607454129887">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="285" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607454129887" />
-    <state width="1478" height="285" key="GridCell.Tab.1.center" timestamp="1607454129887">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="285" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1607454129887" />
-    <state width="1478" height="285" key="GridCell.Tab.1.left" timestamp="1607454129887">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="285" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1607454129887" />
-    <state width="1478" height="285" key="GridCell.Tab.1.right" timestamp="1607454129887">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="285" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1607454129887" />
-    <state width="1478" height="285" key="GridCell.Tab.2.bottom" timestamp="1607454129887">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="285" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607454129887" />
-    <state width="1478" height="285" key="GridCell.Tab.2.center" timestamp="1607454129887">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="285" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1607454129887" />
-    <state width="1478" height="285" key="GridCell.Tab.2.left" timestamp="1607454129887">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="285" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1607454129887" />
-    <state width="1478" height="285" key="GridCell.Tab.2.right" timestamp="1607454129887">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="285" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1607454129887" />
-    <state width="1478" height="285" key="GridCell.Tab.3.bottom" timestamp="1607454129887">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="285" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607454129887" />
-    <state width="1478" height="285" key="GridCell.Tab.3.center" timestamp="1607454129887">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="285" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1607454129887" />
-    <state width="1478" height="285" key="GridCell.Tab.3.left" timestamp="1607454129887">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="285" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1607454129887" />
-    <state width="1478" height="285" key="GridCell.Tab.3.right" timestamp="1607454129887">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="285" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1607454129887" />
-    <state width="1478" height="285" key="GridCell.Tab.4.bottom" timestamp="1607454129903">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="285" key="GridCell.Tab.4.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607454129903" />
-    <state width="1478" height="285" key="GridCell.Tab.4.center" timestamp="1607454129887">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="285" key="GridCell.Tab.4.center/0.0.1536.824@0.0.1536.824" timestamp="1607454129887" />
-    <state width="1478" height="285" key="GridCell.Tab.4.left" timestamp="1607454129887">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="285" key="GridCell.Tab.4.left/0.0.1536.824@0.0.1536.824" timestamp="1607454129887" />
-    <state width="1478" height="285" key="GridCell.Tab.4.right" timestamp="1607454129903">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="285" key="GridCell.Tab.4.right/0.0.1536.824@0.0.1536.824" timestamp="1607454129903" />
-    <state x="277" y="57" width="976" height="708" key="SettingsEditor" timestamp="1607535686528">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="277" y="57" width="976" height="708" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607535686528" />
-    <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog" timestamp="1606585927820">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1606585927820" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1607529438321">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607529438321" />
-    <state x="631" y="300" width="312" height="243" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1606410275487">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="631" y="300" width="312" height="243" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1536.824@0.0.1536.824" timestamp="1606410275487" />
-    <state x="174" y="0" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1606411596991">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="174" y="0" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1606411596991" />
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1607535627183">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1607535627183" />
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1606460315279">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1606460315279" />
-    <state x="585" y="102" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606894565164">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="585" y="102" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1606894565164" />
-    <state x="586" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607534064628">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="586" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607534064628" />
-    <state x="557" y="314" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1607535376490">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="557" y="314" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607535376490" />
-    <state x="425" y="189" key="run.anything.popup" timestamp="1606408565462">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="425" y="189" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1606408565462" />
-    <state x="523" y="250" width="672" height="678" key="search.everywhere.popup" timestamp="1607452206066">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="523" y="250" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607452206066" />
-  </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
       <pinned-members>
-        <PinnedItemInfo parentTag="Type#Microsoft.AspNetCore.Mvc.Razor.RazorPage`1" memberName="Model" />
+        <PinnedItemInfo parentTag="Type#Microsoft.AspNetCore.Mvc.Razor.RazorPageBase" memberName="BodyContent" />
+        <PinnedItemInfo parentTag="Frame#GroceryStore2.Controllers.ProductController.ManageContent" memberName="products" />
         <PinnedItemInfo parentTag="Frame#GroceryStore2.Models.OrderRespository.CreateOrder" memberName="orderDetail" />
+        <PinnedItemInfo parentTag="Type#Microsoft.AspNetCore.Mvc.Razor.RazorPageBase" memberName="ViewBag" />
       </pinned-members>
     </pin-to-top-manager>
   </component>
