@@ -9,6 +9,7 @@
       <e p="appsettings.json" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="Components" t="Include">
+        <e p="EmailService.cs" t="Include" />
         <e p="ShoppingCartSummary.cs" t="Include" />
       </e>
       <e p="Controllers" t="Include">
@@ -18,7 +19,7 @@
         <e p="HomeController.cs" t="Include" />
         <e p="OrderController.cs" t="Include" />
         <e p="ProductController.cs" t="Include" />
-        <e p="ProfileController.cs" t="Include" />
+        <e p="RolesController.cs" t="Include" />
         <e p="ShoppingCartController.cs" t="Include" />
       </e>
       <e p="GroceryStore2.csproj" t="IncludeRecursive" />
@@ -34,6 +35,8 @@
         <e p="20180825091011_modified order class.Designer.cs" t="Include" />
         <e p="20180827001030_Added Identity.cs" t="Include" />
         <e p="20180827001030_Added Identity.Designer.cs" t="Include" />
+        <e p="20210107144931_test.cs" t="Include" />
+        <e p="20210107144931_test.Designer.cs" t="Include" />
         <e p="AppDbContextModelSnapshot.cs" t="Include" />
       </e>
       <e p="Models" t="Include">
@@ -53,8 +56,8 @@
         <e p="ShoppingCartItem.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive">
-        <e p="Debug" t="Include">
-          <e p="netcoreapp3.1" t="Include">
+        <e p="Release" t="Include">
+          <e p="net5.0" t="Include">
             <e p="GroceryStore2.AssemblyInfo.cs" t="Include" />
             <e p="GroceryStore2.RazorAssemblyInfo.cs" t="Include" />
           </e>
@@ -68,25 +71,34 @@
       </e>
       <e p="Startup.cs" t="Include" />
       <e p="ViewModels" t="Include">
+        <e p="ChangeRoleViewModel.cs" t="Include" />
         <e p="CommonProductModel.cs" t="Include" />
+        <e p="ForgotPasswordViewModel.cs" t="Include" />
         <e p="HomeViewModel.cs" t="Include" />
         <e p="LoginViewModel.cs" t="Include" />
         <e p="ProductListViewModel.cs" t="Include" />
         <e p="ProductViewModel.cs" t="Include" />
+        <e p="RegisterViewModel.cs" t="Include" />
+        <e p="ResetPasswordViewModel.cs" t="Include" />
         <e p="ShoppingCartViewModel.cs" t="Include" />
       </e>
       <e p="Views" t="Include">
         <e p="_ViewImports.cshtml" t="Include" />
         <e p="_ViewStart.cshtml" t="Include" />
         <e p="Account" t="Include">
+          <e p="ForgotPassword.cshtml" t="Include" />
+          <e p="ForgotPasswordConfirmation.cshtml" t="Include" />
           <e p="Login.cshtml" t="Include" />
           <e p="Register.cshtml" t="Include" />
+          <e p="ResetPassword.cshtml" t="Include" />
+          <e p="ResetPasswordConfirmation.cshtml" t="Include" />
         </e>
         <e p="Contact" t="Include">
           <e p="Index.cshtml" t="Include" />
         </e>
         <e p="Dashboard" t="Include">
           <e p="Index.cshtml" t="Include" />
+          <e p="ManageContent.cshtml" t="Include" />
         </e>
         <e p="Home" t="Include">
           <e p="Featured.cshtml" t="Include" />
@@ -98,13 +110,16 @@
           <e p="CheckoutComplete.cshtml" t="Include" />
         </e>
         <e p="Product" t="Include">
-          <e p="Get_Product.cshtml" t="Include" />
+          <e p="Create.cshtml" t="Include" />
+          <e p="Edit.cshtml" t="Include" />
           <e p="List.cshtml" t="Include" />
-          <e p="ManageContent.cshtml" t="Include" />
           <e p="ProductDetail.cshtml" t="Include" />
         </e>
-        <e p="Profile" t="Include">
+        <e p="Roles" t="Include">
+          <e p="Create.cshtml" t="Include" />
+          <e p="Edit.cshtml" t="Include" />
           <e p="Index.cshtml" t="Include" />
+          <e p="UserList.cshtml" t="Include" />
         </e>
         <e p="Shared" t="Include">
           <e p="_CookieConsentPartial.cshtml" t="Include" />

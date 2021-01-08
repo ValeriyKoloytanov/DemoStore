@@ -1,4 +1,4 @@
-@model LoginViewModel
+@model RegisterViewModel
 
 <br>
 <div class="uk-flex uk-flex-center">
@@ -20,6 +20,13 @@
             <input class="uk-input" type="text" id="email" asp-for="Email">
         </div>
     </div>
+  <label class="uk-form-label" for="password">Username</label>
+     <div class="uk-margin">
+         <div class="uk-inline">
+             <span class="uk-form-icon uk-form-icon" uk-icon="icon: user"></span>
+             <input class="uk-input" type="login" id="log" asp-for="Username">
+         </div>
+     </div>
 
     <label class="uk-form-label" for="password">Password</label>
     <div class="uk-margin">
@@ -28,13 +35,14 @@
             <input class="uk-input" type="password" id="password" asp-for="Password">
         </div>
     </div>
-
+ <label class="uk-form-label" for="password">Confirm Password</label>
+    <div class="uk-margin">
+        <div class="uk-inline">
+            <span class="uk-form-icon uk-form-icon" uk-icon="icon: lock"></span>
+            <input class="uk-input" type="password" id="confirm password" asp-for="ConfirmPassword">
+        </div>
+    </div>
     <input type="submit" class="uk-button uk-button-default uk-width-1-1" value="Register" />
-
-        <button
-    asp-controller="Account" asp-action="Login"
-    class="uk-button uk-button-primary uk-width-1-1">Log in</button>
-
 </form>
 
 </div>

@@ -1,12 +1,13 @@
 ﻿@using Microsoft.AspNetCore.Identity
+@using System.Security.Claims
 
 @inject SignInManager<AppUser> SignInManager
 @inject UserManager<AppUser> UserManager
 
 @if (User.Identity.IsAuthenticated)
-{
+{ <li class="uk-nav-header uk-text-small uk-text-primary">Hello @User.FindFirstValue(ClaimTypes.Name)</li>
     <li>
-        <a asp-controller="Profile" asp-action="Index"><span data-uk-icon="icon: info"></span> info</a>
+        <a asp-controller="Account" asp-action=""><span data-uk-icon="icon: info"></span> info</a>
     </li>
     <li class="nav-item">
         <form class="form-inline" asp-controller="Account" asp-action="Logout"  method="post" >
@@ -20,7 +21,9 @@ else
       <a class="uk-link-text" id="loginLink" asp-controller="Account" asp-action="Login">Log in</a>
       </li>
     <li>
-      <a class="uk-link-text" id="registerLink" asp-controller="Account" asp-action="Register">Register</a>
+        <a class="uk-link-text" id="registerLink" asp-controller="Account" asp-action="Register">Register</a>
+              <a class="uk-link-text"  asp-controller="Account" asp-action="ForgotPassword">Forgot password?</a>
+
     </li>
 
 }
