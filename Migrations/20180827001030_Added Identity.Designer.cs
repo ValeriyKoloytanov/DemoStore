@@ -21,7 +21,7 @@ namespace GroceryStore2.Migrations
                 .HasAnnotation("ProductVersion", "2.1.2-rtm-30932")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
-            modelBuilder.Entity("GroceryStore2.Models.AppUser", b =>
+            modelBuilder.Entity("DemoStore.Models.AppUser", b =>
                 {
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
@@ -71,7 +71,7 @@ namespace GroceryStore2.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("GroceryStore2.Models.Category", b =>
+            modelBuilder.Entity("DemoStore.Models.Category", b =>
                 {
                     b.Property<int>("CategoryId")
                         .ValueGeneratedOnAdd();
@@ -83,7 +83,7 @@ namespace GroceryStore2.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("GroceryStore2.Models.Order", b =>
+            modelBuilder.Entity("DemoStore.Models.Order", b =>
                 {
                     b.Property<int>("OrderId")
                         .ValueGeneratedOnAdd();
@@ -121,7 +121,7 @@ namespace GroceryStore2.Migrations
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("GroceryStore2.Models.OrderDetail", b =>
+            modelBuilder.Entity("DemoStore.Models.OrderDetail", b =>
                 {
                     b.Property<int>("OrderDetailId")
                         .ValueGeneratedOnAdd();
@@ -143,7 +143,7 @@ namespace GroceryStore2.Migrations
                     b.ToTable("OrderDetails");
                 });
 
-            modelBuilder.Entity("GroceryStore2.Models.Product", b =>
+            modelBuilder.Entity("DemoStore.Models.Product", b =>
                 {
                     b.Property<int>("ProductId")
                         .ValueGeneratedOnAdd();
@@ -167,7 +167,7 @@ namespace GroceryStore2.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("GroceryStore2.Models.ShoppingCartItem", b =>
+            modelBuilder.Entity("DemoStore.Models.ShoppingCartItem", b =>
                 {
                     b.Property<int>("ShoppingCartItemId")
                         .ValueGeneratedOnAdd();
@@ -296,30 +296,30 @@ namespace GroceryStore2.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("GroceryStore2.Models.OrderDetail", b =>
+            modelBuilder.Entity("DemoStore.Models.OrderDetail", b =>
                 {
-                    b.HasOne("GroceryStore2.Models.Order", "Order")
+                    b.HasOne("DemoStore.Models.Order", "Order")
                         .WithMany("OrderLines")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("GroceryStore2.Models.Product", "Product")
+                    b.HasOne("DemoStore.Models.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("GroceryStore2.Models.Product", b =>
+            modelBuilder.Entity("DemoStore.Models.Product", b =>
                 {
-                    b.HasOne("GroceryStore2.Models.Category", "Category")
+                    b.HasOne("DemoStore.Models.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("GroceryStore2.Models.ShoppingCartItem", b =>
+            modelBuilder.Entity("DemoStore.Models.ShoppingCartItem", b =>
                 {
-                    b.HasOne("GroceryStore2.Models.Product", "Product")
+                    b.HasOne("DemoStore.Models.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId");
                 });
@@ -334,7 +334,7 @@ namespace GroceryStore2.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("GroceryStore2.Models.AppUser")
+                    b.HasOne("DemoStore.Models.AppUser")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -342,7 +342,7 @@ namespace GroceryStore2.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("GroceryStore2.Models.AppUser")
+                    b.HasOne("DemoStore.Models.AppUser")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -355,7 +355,7 @@ namespace GroceryStore2.Migrations
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("GroceryStore2.Models.AppUser")
+                    b.HasOne("DemoStore.Models.AppUser")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -363,7 +363,7 @@ namespace GroceryStore2.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("GroceryStore2.Models.AppUser")
+                    b.HasOne("DemoStore.Models.AppUser")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);

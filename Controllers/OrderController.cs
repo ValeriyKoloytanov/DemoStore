@@ -47,5 +47,6 @@ namespace GroceryStore2.Controllers
       ViewBag.CheckoutCompleteMessage = "Thanks for your order.";
       return View();
     }
+    
   }
 }

@@ -37,7 +37,6 @@ namespace GroceryStore2 {
       services.AddMemoryCache ();
       services.AddSession ();
       services.AddHttpContextAccessor();
-      services.AddDatabaseDeveloperPageExceptionFilter();
 
       services.AddAuthentication (options => {
           options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
@@ -57,8 +56,8 @@ namespace GroceryStore2 {
 
     public void Configure (IApplicationBuilder app, IHostEnvironment env) {
       if (env.IsDevelopment ()) {
-        app.UseDeveloperExceptionPage();
-        app.UseMigrationsEndPoint();
+        app.UseDeveloperExceptionPage ();
+        app.UseDatabaseErrorPage ();
       } else {
         app.UseExceptionHandler ("/Home/Error");
         app.UseHsts ();
@@ -88,3 +87,4 @@ namespace GroceryStore2 {
     }
   }
 }
+

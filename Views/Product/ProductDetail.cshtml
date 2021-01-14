@@ -1,9 +1,29 @@
 ﻿@model Product
 <br>
-<div class="uk-container">
-    <hr class="uk-divider-icon">
-    <h3 class="uk-text-center"> Product Details</h3>
-    <img  width="200" height="400" src="@Url.Content(@Model.ImageUrl)" alt="">
-    <button class="uk-button uk-button-default">Add to card</button>
-</div>
 
+    <hr class="uk-divider-icon">
+    <h3 class="uk-text-center">@Model.Name</h3>
+    <img  width="400" height="400" src="@Url.Content(@Model.ImageUrl)" alt="">
+    <p>
+  
+    </p>
+    <div class="uk-container uk-position-center-right">
+    <a class="uk-button uk-button-default"
+       asp-controller="ShoppingCart"
+       asp-action="AddToShoppingCart"
+       asp-route-productId="@Model.ProductId">
+        Add to Cart
+    </a>
+
+        @Model.Price 
+       
+    </div>
+<ul uk-tab>
+    <li><a href="#">Description</a></li>
+    <li><a href="#">Properities</a></li>
+</ul>
+
+<ul class="uk-switcher uk-margin">
+    <li>@Model.Description.</li>
+    <li>.</li>
+</ul>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0qfsQ+mGCLvizvDFCn7Blc2fHdAk3uUtHbM3iQ3Jb03vBApJOyI+Tc8BRbHHrPXKcL1mAcT0tnBPiJXK4jAaTA==",
+  "dgSpecHash": "2qGTl6Syf9FtNBjsRlS0ZYZ/phyVDU0YPccCandzUwEQGDHi093tsbqeqVseG/htS0jqP3HAUWX65ug+MPW5nw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Валерий\\Desktop\\shopC#\\GroceryStore2.csproj",
+  "projectFilePath": "C:\\Users\\Валерий\\Desktop\\shopC#\\DemoStore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Валерий\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Валерий\\.nuget\\packages\\mailkit\\2.10.1\\mailkit.2.10.1.nupkg.sha512",

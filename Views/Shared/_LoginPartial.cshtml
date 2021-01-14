@@ -7,7 +7,7 @@
 @if (User.Identity.IsAuthenticated)
 { <li class="uk-nav-header uk-text-small uk-text-primary">Hello @User.FindFirstValue(ClaimTypes.Name)</li>
     <li>
-        <a asp-controller="Account" asp-action=""><span data-uk-icon="icon: info"></span> info</a>
+        <a asp-controller="Account" asp-action=""><span data-uk-icon="icon: info"></span> Overview</a>
     </li>
     <li class="nav-item">
         <form class="form-inline" asp-controller="Account" asp-action="Logout"  method="post" >

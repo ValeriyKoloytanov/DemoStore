@@ -7325,9 +7325,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Валерий\\Desktop\\shopC#\\GroceryStore2.csproj",
-      "projectName": "GroceryStore2",
-      "projectPath": "C:\\Users\\Валерий\\Desktop\\shopC#\\GroceryStore2.csproj",
+      "projectUniqueName": "C:\\Users\\Валерий\\Desktop\\shopC#\\DemoStore.csproj",
+      "projectName": "DemoStore",
+      "projectPath": "C:\\Users\\Валерий\\Desktop\\shopC#\\DemoStore.csproj",
       "packagesPath": "C:\\Users\\Валерий\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Валерий\\Desktop\\shopC#\\obj\\",
       "projectStyle": "PackageReference",
@@ -7411,7 +7411,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

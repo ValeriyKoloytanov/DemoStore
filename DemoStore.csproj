@@ -2,11 +2,14 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <LangVersion>9</LangVersion>
+    <AssemblyName>DemoStore</AssemblyName>
+    <RootNamespace>DemoStore</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
   <GenerateRuntimeConfigurationFiles>True</GenerateRuntimeConfigurationFiles>
 </PropertyGroup>
   <ItemGroup>
+    <Folder Include="Pages" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
@@ -31,23 +34,20 @@
     <Compile Remove="Migrations\20201126175004_mymigration.Designer.cs" />
     <Compile Remove="preview\**" />
     <Compile Remove="Controllers\Profile.cs" />
-    <Compile Remove="Pages\**" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="README.md" />
     <None Remove=".gitignore" />
     <None Remove="preview\**" />
-    <None Remove="Pages\**" />
+    <None Include="wwwroot\CustomErrorPages\404.html" />
     <None Include="wwwroot\styles.css" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="preview\**" />
-    <EmbeddedResource Remove="Pages\**" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="preview\**" />
     <Content Remove="Views\Product\DetailsPage.cshtml" />
-    <Content Remove="Pages\**" />
     <Content Remove="Views\Dashboard\Content_managment.cshtml" />
   </ItemGroup>
  </Project>

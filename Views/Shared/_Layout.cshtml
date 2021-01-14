@@ -46,11 +46,6 @@
                 </div>
               </li>
               <li>
-                <a asp-controller="Contact"
-                   asp-action="Index"
-                >Contact</a>
-              </li>
-              <li>
                 @await Component.InvokeAsync("ShoppingCartSummary")
               </li>
               </ul>
@@ -58,7 +53,12 @@
 
 
           <div class="uk-navbar-right">
-               <a class="uk-button uk-button-default"asp-controller="Dashboard"asp-action="Index">Button</a>
+            
+            @if (this.User.IsInRole("Admin"))
+                       {
+                         <a class="uk-button uk-button-default"asp-controller="Dashboard"asp-action="Index">Go to dasboard</a>
+
+                       }
             <ul class="uk-navbar-nav">
               <li>
                 <a href="#" data-uk-icon="icon:user"></a>
@@ -87,7 +87,7 @@
     <!--FOOTER-->
     <footer class="uk-section uk-section-muted uk-section-small uk-padding-small">
       <div class="uk-container">
-        <p class="uk-text-small uk-text-center">Copyright 2018 - Grocery Store.</p>
+        <p class="uk-text-small uk-text-center">Copyright 2020 - Demo Store.</p>
       </div>
     </footer>
     <!--/FOOTER-->

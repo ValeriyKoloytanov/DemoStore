@@ -20,7 +20,7 @@ namespace GroceryStore2.Migrations
                 .HasAnnotation("ProductVersion", "2.1.1-rtm-30846")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
-            modelBuilder.Entity("GroceryStore2.Models.Category", b =>
+            modelBuilder.Entity("DemoStore.Models.Category", b =>
                 {
                     b.Property<int>("CategoryId")
                         .ValueGeneratedOnAdd();
@@ -32,7 +32,7 @@ namespace GroceryStore2.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("GroceryStore2.Models.Product", b =>
+            modelBuilder.Entity("DemoStore.Models.Product", b =>
                 {
                     b.Property<int>("ProductId")
                         .ValueGeneratedOnAdd();
@@ -56,9 +56,9 @@ namespace GroceryStore2.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("GroceryStore2.Models.Product", b =>
+            modelBuilder.Entity("DemoStore.Models.Product", b =>
                 {
-                    b.HasOne("GroceryStore2.Models.Category", "Category")
+                    b.HasOne("DemoStore.Models.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);

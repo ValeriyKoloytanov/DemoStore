@@ -11,151 +11,29 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7569fbdc-3dc0-465f-9372-d0e387e12b6e" name="Default Changelist" comment="i think i fixed a bug...">
-      <change afterPath="$PROJECT_DIR$/ViewModels/ChangeRoleViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Roles/Index.cshtml" afterDir="false" />
+    <list default="true" id="7569fbdc-3dc0-465f-9372-d0e387e12b6e" name="Default Changelist" comment="regular updates">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GroceryStore2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroceryStore2/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GroceryStore2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroceryStore2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/config/applicationhost.config" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/GroceryStore2/config/applicationhost.config" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/GroceryStore2/config/applicationhost.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AccountController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/Dashboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/Dashboard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/OrderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/OrderController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/ProductController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ProductController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/ProfileController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroceryStore2.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore2.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore2.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DemoStore.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryStore2.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20180815224613_Init.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/20180815224613_Init.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20180817215913_Added shoppingCart.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/20180817215913_Added shoppingCart.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20180824093755_added order.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/20180824093755_added order.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20180825091011_modified order class.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/20180825091011_modified order class.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20180827001030_Added Identity.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/20180827001030_Added Identity.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/AppUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/AppUser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Product.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ViewModels/LoginViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ViewModels/LoginViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Account/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Account/Login.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Account/Register.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Account/Register.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Profile/Index.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Dashboard/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Dashboard/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Product/ProductDetail.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Product/ProductDetail.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Roles/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Roles/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Shared/_LayoutDashboard.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_LayoutDashboard.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Shared/_LoginPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_LoginPartial.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/ShoppingCart/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/ShoppingCart/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GroceryStore2.Views.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GroceryStore2.Views.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GroceryStore2.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GroceryStore2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GroceryStore2.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GroceryStore2.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GroceryStore2.runtimeconfig.dev.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/GroceryStore2.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.Internal.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Razor.Language.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Bcl.HashCode.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.Workspaces.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.Razor.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.Workspaces.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.Design.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Identity.Core.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Identity.Stores.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Npgsql.EntityFrameworkCore.PostgreSQL.Design.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Npgsql.EntityFrameworkCore.PostgreSQL.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Npgsql.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/NuGet.Frameworks.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/System.Collections.Immutable.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/System.Composition.AttributedModel.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/System.Composition.Convention.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/System.Composition.Hosting.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/System.Composition.Runtime.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/System.Composition.TypedParts.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/cs/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/cs/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/de/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/de/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/de/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/es/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/es/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/es/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/fr/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/fr/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/it/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/it/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/it/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ja/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ja/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ko/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ko/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/pl/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/pl/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ru/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ru/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/tr/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/tr/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.RazorCoreGenerate.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/GroceryStore2.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Razor/Views/ShoppingCart/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Razor/Views/ShoppingCart/Index.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/GroceryStore2.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/GroceryStore2.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/GroceryStore2.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/GroceryStore2.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
@@ -186,67 +64,77 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Views/Shared/ProductCard.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C80B499D-ADA7-49E0-A8EE-7A9B1744160B/233/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Views/Shared/_LayoutDashboard.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Views/Home/Featured.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Views/Product/DetailsPage.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/package.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ViewModels/CommonProductModel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Views/Product/Edit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/FBEFA42B-A2E6-4C44-97E9-579677415DBC/1D/UserManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Properties/launchSettings.json" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Migrations/20201126173218_mymigration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2BC5ED24-0D5C-402C-8B6A-BD14FFCEE267/1E0/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Migrations/20201126142107_mymigration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Views/Dashboard/Content_managment.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Views/Product/DetailsPage.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Product.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/styles.css" />
-      <option value="$PROJECT_DIR$/wwwroot/styles.css" />
-      <option value="$PROJECT_DIR$/Views/Dashboard/MananageContent.cshtml" />
-      <option value="$PROJECT_DIR$/Models/ProductRepository.cs" />
-      <option value="$PROJECT_DIR$/Views/Product/EditListing.cshtml" />
-      <option value="$PROJECT_DIR$/Models/CommonProductModel.cs" />
-      <option value="$PROJECT_DIR$/Views/_ViewStart.cshtml" />
-      <option value="$PROJECT_DIR$/Components/ModalModels.cs" />
-      <option value="$PROJECT_DIR$/Views/Shared/Get_Product.cshtml" />
-      <option value="$PROJECT_DIR$/Components/BootstrapHtml.cs" />
       <option value="$PROJECT_DIR$/Views/Product/add_product.cshtml" />
       <option value="$PROJECT_DIR$/Views/Product/ManageContent.cshtml" />
       <option value="$PROJECT_DIR$/Views/Product/Get_Product.cshtml" />
       <option value="$PROJECT_DIR$/Views/ShoppingCart/Index.cshtml" />
       <option value="$PROJECT_DIR$/Models/Product.cs" />
-      <option value="$PROJECT_DIR$/Startup.cs" />
-      <option value="$PROJECT_DIR$/Views/Shared/_LayoutDashboard.cshtml" />
       <option value="$PROJECT_DIR$/ViewModels/ResetPasswordViewModel.cs" />
       <option value="$PROJECT_DIR$/ViewModels/ForgotPasswordViewModel.cs" />
       <option value="$PROJECT_DIR$/Views/Account/ForgotPasswordConfirmation.cshtml" />
       <option value="$PROJECT_DIR$/Views/Account/ResetPasswordConfirmation.cshtml" />
       <option value="$PROJECT_DIR$/Views/Account/ForgotPassword.cshtml" />
-      <option value="$PROJECT_DIR$/Controllers/Dashboard.cs" />
-      <option value="$PROJECT_DIR$/.vs/GroceryStore2/config/applicationhost.config" />
       <option value="$PROJECT_DIR$/Components/RoutesConfig.cs" />
       <option value="$PROJECT_DIR$/Views/Account/ResetPassword.cshtml" />
       <option value="$PROJECT_DIR$/Components/EmailService.cs" />
       <option value="$PROJECT_DIR$/Migrations/AppDbContextModelSnapshot.cs" />
       <option value="$PROJECT_DIR$/Views/Account/Login.cshtml" />
-      <option value="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" />
       <option value="$PROJECT_DIR$/ViewModels/RegisterViewMomel.cs" />
       <option value="$PROJECT_DIR$/Views/Account/Register.cshtml" />
       <option value="$PROJECT_DIR$/ViewModels/RegisterViewModel.cs" />
       <option value="$PROJECT_DIR$/ViewModels/LoginViewModel.cs" />
-      <option value="$PROJECT_DIR$/Views/Dashboard/Index.cshtml" />
       <option value="$PROJECT_DIR$/Views/Profile/Index.cshtml" />
       <option value="$PROJECT_DIR$/Controllers/ProfileController.cs" />
-      <option value="$PROJECT_DIR$/Views/Shared/_LoginPartial.cshtml" />
       <option value="$PROJECT_DIR$/Models/AppUser.cs" />
       <option value="$PROJECT_DIR$/Controllers/AccountController.cs" />
-      <option value="$PROJECT_DIR$/Controllers/ProductController.cs" />
       <option value="$PROJECT_DIR$/Views/Product/Create.cshtml" />
-      <option value="$PROJECT_DIR$/Views/Product/Edit.cshtml" />
       <option value="$PROJECT_DIR$/Views/Dashboard/ManageContent.cshtml" />
-      <option value="$PROJECT_DIR$/Controllers/RolesController.cs" />
-      <option value="$PROJECT_DIR$/Views/Roles/Create.cshtml" />
-      <option value="$PROJECT_DIR$/Views/Roles/UserList.cshtml" />
-      <option value="$PROJECT_DIR$/Views/Roles/Index.cshtml" />
       <option value="$PROJECT_DIR$/ViewModels/CommonProductModel.cs" />
       <option value="$PROJECT_DIR$/ViewModels/ChangeRoleViewModel.cs" />
+      <option value="$PROJECT_DIR$/Controllers/RolesController.cs" />
+      <option value="$PROJECT_DIR$/Views/Roles/UserList.cshtml" />
       <option value="$PROJECT_DIR$/Views/Roles/Edit.cshtml" />
+      <option value="$PROJECT_DIR$/Views/Roles/Create.cshtml" />
+      <option value="$PROJECT_DIR$/Controllers/Dashboard.cs" />
+      <option value="$PROJECT_DIR$/404.html" />
+      <option value="$PROJECT_DIR$/Pages/Error/NotFound.cshtml" />
+      <option value="$PROJECT_DIR$/Views/Error/NotFound.cshtml" />
+      <option value="$PROJECT_DIR$/Controllers/ErrorController.cs" />
+      <option value="$PROJECT_DIR$/.vs/GroceryStore2/config/applicationhost.config" />
+      <option value="$PROJECT_DIR$/Controllers/ErrorsController.cs" />
+      <option value="$PROJECT_DIR$/wwwroot/CustomErrorPages/404css.css" />
+      <option value="$PROJECT_DIR$/wwwroot/styles.css" />
+      <option value="$PROJECT_DIR$/Views/Roles/Index.cshtml" />
+      <option value="$PROJECT_DIR$/Views/Dashboard/Index.cshtml" />
+      <option value="$PROJECT_DIR$/Views/Product/Edit.cshtml" />
+      <option value="$PROJECT_DIR$/wwwroot/CustomErrorPages/404.html" />
+      <option value="$PROJECT_DIR$/Views/Shared/_LoginPartial.cshtml" />
+      <option value="$PROJECT_DIR$/Views/Shared/_LayoutDashboard.cshtml" />
+      <option value="$PROJECT_DIR$/Controllers/OrderController.cs" />
+      <option value="$PROJECT_DIR$/Controllers/ProductController.cs" />
+      <option value="$PROJECT_DIR$/Startup.cs" />
+      <option value="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" />
+      <option value="$PROJECT_DIR$/Views/Product/ProductDetail.cshtml" />
     </changedPaths>
   </component>
   <component name="JsFlowSettings">
@@ -264,7 +152,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="postgresql" />
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3502052" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34678522" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -282,7 +170,7 @@
       <method v="2" />
     </configuration>
     <configuration name="GroceryStore2: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/GroceryStore2.csproj" />
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/DemoStore.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
       <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -297,7 +185,7 @@
       </method>
     </configuration>
     <configuration name="GroceryStore2: empty" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/GroceryStore2.csproj" />
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/DemoStore.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
       <option name="LAUNCH_PROFILE_NAME" value="empty" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -386,6 +274,18 @@
       <workItem from="1610008905175" duration="7474000" />
       <workItem from="1610028977752" duration="1795000" />
       <workItem from="1610030836260" duration="8503000" />
+      <workItem from="1610091104764" duration="3250000" />
+      <workItem from="1610176752189" duration="2914000" />
+      <workItem from="1610185900623" duration="915000" />
+      <workItem from="1610187538484" duration="2711000" />
+      <workItem from="1610204043552" duration="3089000" />
+      <workItem from="1610266015948" duration="1505000" />
+      <workItem from="1610351927798" duration="10817000" />
+      <workItem from="1610438208297" duration="6941000" />
+      <workItem from="1610522017306" duration="594000" />
+      <workItem from="1610540108955" duration="4043000" />
+      <workItem from="1610613162593" duration="1831000" />
+      <workItem from="1610625845797" duration="89000" />
     </task>
     <task id="LOCAL-00001" summary="i think i fixed a bug...">
       <created>1609514626853</created>
@@ -394,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609514626853</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="regular updates">
+      <created>1610091172790</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610091172790</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,23 +358,24 @@
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="i think i fixed a bug..." />
-    <option name="LAST_COMMIT_MESSAGE" value="i think i fixed a bug..." />
+    <MESSAGE value="regular updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="regular updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Controllers/AccountController.cs</url>
-          <line>117</line>
-          <properties documentPath="C:\Users\Валерий\Desktop\shopC#\Controllers\AccountController.cs" initialLine="117" containingFunctionPresentation="method 'ForgotPassword'">
+          <url>file://$PROJECT_DIR$/Controllers/ProductController.cs</url>
+          <line>80</line>
+          <properties documentPath="C:\Users\Валерий\Desktop\shopC#\Controllers\ProductController.cs" initialLine="80" containingFunctionPresentation="method 'Edit'">
             <startOffsets>
-              <option value="3240" />
+              <option value="2245" />
             </startOffsets>
             <endOffsets>
-              <option value="3390" />
+              <option value="2325" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="14" />
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
