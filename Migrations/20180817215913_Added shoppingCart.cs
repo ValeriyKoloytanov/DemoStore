@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace GroceryStore2.Migrations
+namespace DemoStore.Migrations
 {
     public partial class AddedshoppingCart : Migration
     {

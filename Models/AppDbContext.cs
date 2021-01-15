@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace GroceryStore2.Models
+namespace DemoStore.Models
 {
   public class AppDbContext : IdentityDbContext<AppUser>
   {

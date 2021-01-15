@@ -1,18 +1,14 @@
-using System;
-using GroceryStore2.Models;
+using DemoStore.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using GroceryStore2.ViewModels;
-using Microsoft.AspNetCore.Hosting;
+using DemoStore.ViewModels;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 // ReSharper disable Mvc.ViewNotResolved
 
-namespace GroceryStore2.Controllers
+namespace DemoStore.Controllers
 {
   public class ProductController : Controller
   {

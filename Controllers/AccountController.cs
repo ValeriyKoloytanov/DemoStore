@@ -2,12 +2,12 @@ using System.Threading;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using GroceryStore2.Models;
-using GroceryStore2.ViewModels;
+using DemoStore.Models;
+using DemoStore.ViewModels;
 using System.Threading.Tasks;
-using GroceryStore2.Components;
+using DemoStore.Components;
 
-namespace GroceryStore2.Controllers
+namespace DemoStore.Controllers
 {
 
   [Authorize]

@@ -1,4 +1,4 @@
-﻿namespace GroceryStore2.ViewModels
+﻿namespace DemoStore.ViewModels
 {
   public class ProductViewModel
   {

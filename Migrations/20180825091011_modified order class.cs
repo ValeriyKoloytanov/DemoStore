@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace GroceryStore2.Migrations
+namespace DemoStore.Migrations
 {
     public partial class modifiedorderclass : Migration
     {

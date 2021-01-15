@@ -1,8 +1,8 @@
-using GroceryStore2.Models;
+using DemoStore.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GroceryStore2.Controllers
+namespace DemoStore.Controllers
 {
   public class OrderController : Controller
   {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace GroceryStore2.Models
+namespace DemoStore.Models
 {
     public interface IProductRepository
     {

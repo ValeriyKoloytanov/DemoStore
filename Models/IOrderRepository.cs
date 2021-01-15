@@ -1,4 +1,5 @@
-namespace GroceryStore2.Models
+
+namespace DemoStore.Models
 {
     public interface IOrderRepository
     {

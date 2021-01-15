@@ -1,8 +1,8 @@
-using GroceryStore2.Models;
-using GroceryStore2.ViewModels;
+using DemoStore.Models;
+using DemoStore.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GroceryStore2.Components
+namespace DemoStore.Components
 {
   public class ShoppingCartSummary : ViewComponent
   {

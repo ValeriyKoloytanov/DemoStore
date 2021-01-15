@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace GroceryStore2.Models
+namespace DemoStore.Models
 {
   public class AppUser : IdentityUser
   {

@@ -2,7 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
-namespace GroceryStore2.Models
+
+namespace DemoStore.Models
 {
   public class ProductRepository : IProductRepository
   {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GroceryStore2.Controllers
+namespace DemoStore.Controllers
 {
     [Authorize(Roles = "Admin")]
     public class Dashboard : Controller

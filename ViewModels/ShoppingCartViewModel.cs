@@ -1,6 +1,6 @@
-using GroceryStore2.Models;
+using DemoStore.Models;
 
-namespace GroceryStore2.ViewModels
+namespace DemoStore.ViewModels
 {
   public class ShoppingCartViewModel
   {

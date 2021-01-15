@@ -1,0 +1,61 @@
+﻿@model CommonViewModel
+
+@{
+    Layout = "_LayoutDashboard";
+}
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title></title>
+</head>
+<body>
+<div>
+@using (Html.BeginForm("Edit", "Product","@Model.product.ProductId", FormMethod.Post))
+{
+    <div class="uk-margin">
+            <label class="uk-form-label" for="form-horizontal-text">Name</label>
+            <div class="uk-form-controls">
+                <input asp-for="product.Name" class="uk-input uk-width-1-2" id="form-horizontal-text" type="text" placeholder="Some text...">
+            </div>
+        </div>
+
+        <div class="uk-margin">
+            <label class="uk-form-label" for="form-horizontal-text">Description</label>
+            <div class="uk-form-controls">
+                <input asp-for="product.Description" class="uk-input uk-width-1-2" id="form-horizontal-text" type="text" placeholder="Some text...">
+            </div>
+        </div>
+        <div class="uk-margin">
+            <label class="uk-form-label" for="form-horizontal-text">Price</label>
+            <div class="uk-form-controls">
+                <input asp-for="product.Price" class="uk-input uk-width-1-2" id="form-horizontal-text" type="text" placeholder="Some text...">
+            </div>
+        </div>
+    
+    <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+        <label class="uk-form-label" for="form-horizontal-text">is_featured</label>
+        <input asp-for="product.IsFeatured"class="uk-checkbox" type="checkbox">
+    </div>
+    <div class="uk-margin">
+        <Label class="uk-form-label" for="form-horizontal-text">Price</label>
+        <select class="uk-select uk-width-1-2" asp-for="product.CategoryId" asp-items="ViewBag.Categories as SelectList"></select>
+    </div>
+    <div class="js-upload uk-placeholder uk-text-center uk-width-1-2">
+            <span uk-icon="icon: cloud-upload"></span>
+            <span class="uk-text-middle">Attach binaries by dropping them here or</span>
+            <div uk-form-custom>
+                <input asp-for="product.ImageUrl" type="file" multiple="falsw" accept=".jpg, .jpeg, .png">
+                <span class="uk-link">selecting one</span>
+            </div>
+        </div>
+
+        <button
+            asp-controller="Product" asp-action="Create"
+            class="uk-button uk-button-primary  uk-width-1-2">
+            Add
+        </button>
+}
+</div>
+</body>
+</html>

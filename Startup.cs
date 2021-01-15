@@ -1,4 +1,4 @@
-﻿using GroceryStore2.Models;
+﻿using DemoStore.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
@@ -10,7 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace GroceryStore2 {
+namespace DemoStore {
   public class Startup {
     public Startup (IConfiguration configuration) {
       Configuration = configuration;

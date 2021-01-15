@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace GroceryStore2.Models
+namespace DemoStore.Models
 {
     public class CategoryRepository : ICategoryRepository
     {

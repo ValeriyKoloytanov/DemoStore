@@ -5,7 +5,7 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace GroceryStore2.Models
+namespace DemoStore.Models
 {
   public class ShoppingCart
   {

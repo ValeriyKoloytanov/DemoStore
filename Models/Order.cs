@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace GroceryStore2.Models
+namespace DemoStore.Models
 {
     public class Order
     {

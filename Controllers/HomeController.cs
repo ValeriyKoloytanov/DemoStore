@@ -1,8 +1,8 @@
-using GroceryStore2.Models;
-using GroceryStore2.ViewModels;
+using DemoStore.Models;
+using DemoStore.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GroceryStore2.Controllers
+namespace DemoStore.Controllers
 {
     public class HomeController : Controller
     {

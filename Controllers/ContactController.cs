@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace GroceryStore2.Controllers
+namespace DemoStore.Controllers
 {
   public class ContactController : Controller
   {

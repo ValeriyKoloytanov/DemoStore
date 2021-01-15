@@ -1,0 +1,31 @@
+﻿@model IEnumerable<DemoStore.Models.AppUser>
+
+@{
+    Layout = "_LayoutDashboard";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+ <h2>Список пользователей</h2>
+ <table class="table">
+     @foreach (var user in Model)
+     {
+         <tr>
+             <td>@user.Email</td>
+             <td>
+                 <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-userid="@user.Id">Права доступа</a>
+             </td>
+         </tr>
+     }
+ </table>     
+</div>
+</body>
+
+
+</html>

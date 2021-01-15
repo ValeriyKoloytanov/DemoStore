@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace GroceryStore2 {
+namespace DemoStore {
   public class Program {
     public static void Main (string[] args) {
       CreateWebHostBuilder (args).Build ().Run ();
