@@ -3,7 +3,6 @@
 
     <hr class="uk-divider-icon">
     <h3 class="uk-text-center">@Model.Name</h3>
-    <img  width="400" height="400" src="@Url.Content(@Model.ImageUrl)" alt="">
     <p>
   
     </p>
@@ -15,15 +14,11 @@
         Add to Cart
     </a>
 
-        @Model.Price 
-       
+        @Model.Price
     </div>
-<ul uk-tab>
-    <li><a href="#">Description</a></li>
-    <li><a href="#">Properities</a></li>
-</ul>
-
-<ul class="uk-switcher uk-margin">
-    <li>@Model.Description.</li>
-    <li>.</li>
-</ul>
+<li>@Model.Description.</li>  
+  @for (int i=0;i< Model.Properities.Count;i++)
+            {
+                <li>@Model.Properities[i]</li>
+            }
+    

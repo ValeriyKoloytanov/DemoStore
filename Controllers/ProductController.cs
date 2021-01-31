@@ -1,9 +1,13 @@
+using System;
 using DemoStore.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using DemoStore.ViewModels;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 // ReSharper disable Mvc.ViewNotResolved
@@ -15,11 +19,14 @@ namespace DemoStore.Controllers
     private readonly IProductRepository _productRepository;
     private readonly ICategoryRepository _categoryRepository;
     private readonly AppDbContext _appDbContext;
-    public ProductController(IProductRepository productRepository, ICategoryRepository categoryRepository ,AppDbContext appDbContext)
+    private readonly IWebHostEnvironment webHostEnvironment;
+    public ProductController(IProductRepository productRepository, ICategoryRepository categoryRepository ,AppDbContext appDbContext,IWebHostEnvironment hostEnvironment)
     {
       _productRepository = productRepository;
       _categoryRepository = categoryRepository;
       _appDbContext = appDbContext;
+      webHostEnvironment = hostEnvironment;  
+
     }
 
     public IActionResult ProductDetail(int productId)
@@ -85,8 +92,23 @@ namespace DemoStore.Controllers
       );
     }
 
+    private string UploadedFile(ProductViewModel model)  
+    {  
+      string filePath = null;  
+
+      if (model.ProfileImage != null)  
+      {  
+        string uploadsFolder = Path.Combine(webHostEnvironment.WebRootPath, "img");   
+         filePath = Path.Combine(uploadsFolder, model.ImageUrl);  
+        using (var fileStream = new FileStream(filePath, FileMode.Create))  
+        {  
+          model.ProfileImage.CopyTo(fileStream);  
+        }  
+      }  
+      return filePath;  
+    }  
     [HttpPost]
-    public   IActionResult Edit(Product product)
+    public  async Task<IActionResult> Edit(Product product)
     {
       _appDbContext.Entry(product).State = EntityState.Modified;
       _appDbContext.Entry(product).CurrentValues.SetValues(product);
@@ -94,8 +116,9 @@ namespace DemoStore.Controllers
       _appDbContext.Entry(product).Property("Description").IsModified = true;
       _appDbContext.Entry(product).Property("Name").IsModified = true;
       _appDbContext.Entry(product).Property("IsFeatured").IsModified = true;
-      _appDbContext.Entry(product).Property("CategoryId").IsModified = true;
-      _appDbContext.SaveChangesAsync();
+      _appDbContext.Entry(product).Property("CategoryId").IsModified = true;  
+      _appDbContext.Entry(product).Property("Properities").IsModified = true;
+      await  _appDbContext.SaveChangesAsync();
       return RedirectToAction("ManageContent");
     }
 
@@ -105,12 +128,35 @@ namespace DemoStore.Controllers
       ViewBag.Categories = categories;
       return View();
     }
+    public  async Task<IActionResult>  new_property(int id )
+    
+    { 
+      Product product = _appDbContext.Products.FirstOrDefault(p => p.ProductId == id);
 
+      _appDbContext.Entry(product).State = EntityState.Modified;
+        _appDbContext.Entry(product).CurrentValues.SetValues(product);
+        _appDbContext.Entry(product).Property("Properities").IsModified = true;
+        product.Properities.Add("");
+        await  _appDbContext.SaveChangesAsync();
+       return  RedirectToAction("ManageContent");
+    }
+    public  async Task<IActionResult>  delete_prop(int id,int i )
+    
+    { 
+      Product product = _appDbContext.Products.FirstOrDefault(p => p.ProductId == id);
+
+      _appDbContext.Entry(product).State = EntityState.Modified;
+      _appDbContext.Entry(product).CurrentValues.SetValues(product);
+      _appDbContext.Entry(product).Property("Properities").IsModified = true;
+      product.Properities.RemoveAt(i);
+      await  _appDbContext.SaveChangesAsync();
+      return  RedirectToAction("ManageContent");
+    }
     [HttpPost]
     public async Task<IActionResult> Create(Product product)
     {
+ 
       _appDbContext.Products.Add(product);
-      product.ImageUrl= "~/img/fruits/"+  product.ImageUrl;
 
       await _appDbContext.SaveChangesAsync();
       return RedirectToAction("ManageContent");
@@ -119,6 +165,7 @@ namespace DemoStore.Controllers
     public   async  Task<IActionResult> Delete(int id)
     {
       Product product = _appDbContext.Products.FirstOrDefault(p => p.ProductId == id);
+    
       _appDbContext.Products.Remove(product);
        await _appDbContext.SaveChangesAsync();
       return RedirectToAction("ManageContent");

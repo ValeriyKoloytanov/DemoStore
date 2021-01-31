@@ -3,7 +3,8 @@ using System;
 using DemoStore.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace DemoStore.Migrations
 {
@@ -189,11 +190,17 @@ namespace DemoStore.Migrations
                         .HasColumnType("integer")
                         .UseIdentityByDefaultColumn();
 
+                    b.Property<int>("Ammaval")
+                        .HasColumnType("integer");
+
                     b.Property<int>("CategoryId")
                         .HasColumnType("integer");
 
                     b.Property<string>("Description")
                         .HasColumnType("text");
+
+                    b.Property<byte[]>("Image")
+                        .HasColumnType("bytea");
 
                     b.Property<string>("ImageUrl")
                         .HasColumnType("text");
@@ -206,6 +213,9 @@ namespace DemoStore.Migrations
 
                     b.Property<decimal>("Price")
                         .HasColumnType("numeric");
+
+                    b.Property<string[]>("Properities")
+                        .HasColumnType("text[]");
 
                     b.HasKey("ProductId");
 

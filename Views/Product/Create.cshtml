@@ -11,7 +11,7 @@
 </head>
 <body>
 <div>
-@using (Html.BeginForm("Edit", "Product","@Model.product.ProductId", FormMethod.Post))
+@using (Html.BeginForm("Edit", "Product","@Model.product", FormMethod.Post))
 {
     <div class="uk-margin">
             <label class="uk-form-label" for="form-horizontal-text">Name</label>
@@ -45,7 +45,7 @@
             <span uk-icon="icon: cloud-upload"></span>
             <span class="uk-text-middle">Attach binaries by dropping them here or</span>
             <div uk-form-custom>
-                <input asp-for="product.ImageUrl" type="file" multiple="falsw" accept=".jpg, .jpeg, .png">
+                <input asp-for="product.Image" type="file" multiple="falsw" accept=".jpg, .jpeg, .png">
                 <span class="uk-link">selecting one</span>
             </div>
         </div>

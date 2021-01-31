@@ -8,5 +8,8 @@
     "net": "dotnet run"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "perfect-scrollbar": "^1.5.0"
+  }
 }

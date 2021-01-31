@@ -31,7 +31,7 @@ namespace DemoStore.Models
           OrderId = order.OrderId,
           Price = shoppingCartItem.Product.Price
         };
-
+        shoppingCartItem.Product.Ammaval= shoppingCartItem.Product.Ammaval-shoppingCartItem.Amount;    
         _appDbContext.OrderDetails.Add(orderDetail);
       }
 

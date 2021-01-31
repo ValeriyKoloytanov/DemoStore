@@ -1,76 +1,60 @@
-﻿<!DOCTYPE html>
-<html>
-
+﻿@{
+    ViewData["Title"] = "CoreUI";
+}
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- UIkit CSS -->
-    <link href="~/styles.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/css/uikit.min.css"/>
-    <title>Grocery Store</title>
+    <link rel="shortcut icon" href="~/img/logo.png">
+    <title>@ViewData["Title"] - Bootstrap 4 Admin Template</title>
+    <link rel="stylesheet" href="https://unpkg.com/@@coreui/icons@2.0.0-beta.3/css/free.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@@coreui/icons@2.0.0-beta.3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@@coreui/icons@2.0.0-beta.3/css/brand.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@@coreui/icons@2.0.0-beta.3/css/flag.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@@coreui/coreui/dist/css/coreui.min.css" crossorigin="anonymous">    
+    @RenderSection("Styles", required: false)
 </head>
-
-<body>
-<div class="uk-offcanvas-content">
-<!--HEADER-->
- <header>
-      <div class="uk-container">
-        <nav class="uk-navbar-transparent" data-uk-navbar>
-          <div class="uk-navbar-left">
-            <a class="uk-navbar-item uk-logo" asp-area="" asp-controller="Home" asp-action="Index">
-              <img src="~/img/logo.jpg" alt="logo">
-            </a>
-          </div>
-          <div class="uk-navbar-center uk-visible@s">
-            <ul class="uk-navbar-nav">
-              <li>
-                <a href="#">Tools
-                  <span data-uk-icon="icon: triangle-down"></span>
-                </a>
-                <div class="uk-navbar-dropdown">
-                  <ul class="uk-nav uk-navbar-dropdown-nav">
-                    <li>
-                      <a asp-controller="Product" asp-action="ManageContent">Manage content</a>
-                    </li>
-                    <li>
-                      <a asp-controller="Roles" asp-action="Index">Manage Users</a>
-                    </li>
-                      <li>
-                        <a asp-controller="Roles" asp-action="Index">Sales managment</a>
-                        </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                @await Component.InvokeAsync("ShoppingCartSummary")
-              </li>
-            </ul>
-          </div>
-        </nav>
-        </div>
- </header>
-<!--/HEADER-->
-<div>
-    @RenderBody()
-
+<body class="c-app">
+<div class="c-sidebar c-sidebar-dark c-sidebar-show">
+  <ul class="c-sidebar-nav">
+    <li class="c-sidebar-nav-title">Dashboard</li>
+    <li class="c-sidebar-nav-item">
+      <a class="c-sidebar-nav-link" asp-controller="Product" asp-action="ManageContent">
+        <i class="c-sidebar-nav-icon cil-speedometer"></i> Manage Content
+      </a>
+    </li>
+    <li class="c-sidebar-nav-item">
+      <a class="c-sidebar-nav-link" asp-controller="Roles" asp-action="Index">
+        <i class="c-sidebar-nav-icon cil-speedometer"></i> Manage Users
+      </a>
+    </li>
+    <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
+    <i class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">Base</i>
+    <ul class="c-sidebar-nav-dropdown-items">
+      <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/breadcrumb.html"><span class="c-sidebar-nav-icon"></span> Breadcrumb</a></li>
+      <li/>
+      <li/>
+    </ul>
+    </ul>
 </div>
-
-
-<hr class="uk-divider-icon">
-<!--FOOTER-->
-<footer>
-</footer>
-<!--/FOOTER-->
-
-
-<!-- UIkit JS -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/js/uikit-icons.min.js"></script>
-
-@RenderSection("scripts", required: false)
+<div class="c-wrapper">
+  <header class="navbar navbar-light">
+  </header>
+  <div class="c-body">
+    <main class="c-main">
+      <div class="container-fluid">
+        @RenderBody()
+      </div>
+      <!-- Main content here -->
+    </main>
+  </div>
+  <footer class="c-footer">
+    <!-- Footer content here -->
+  </footer>
 </div>
-
+<script src="~/node_modules/perfect-scrollbar/dist/perfect-scrollbar.js"></script>
+<script src="https://unpkg.com/@@popperjs/core@2"></script>
+<script src="https://unpkg.com/@@coreui/coreui/dist/js/coreui.js"></script>
 </body>
 </html>

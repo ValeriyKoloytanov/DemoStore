@@ -9,7 +9,6 @@
   <GenerateRuntimeConfigurationFiles>True</GenerateRuntimeConfigurationFiles>
 </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Pages" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
@@ -34,20 +33,52 @@
     <Compile Remove="Migrations\20201126175004_mymigration.Designer.cs" />
     <Compile Remove="preview\**" />
     <Compile Remove="Controllers\Profile.cs" />
+    <Compile Remove="Pages\**" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="README.md" />
     <None Remove=".gitignore" />
     <None Remove="preview\**" />
     <None Include="wwwroot\CustomErrorPages\404.html" />
-    <None Include="wwwroot\styles.css" />
+    <None Remove="Pages\**" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="preview\**" />
+    <EmbeddedResource Remove="Pages\**" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="preview\**" />
     <Content Remove="Views\Product\DetailsPage.cshtml" />
     <Content Remove="Views\Dashboard\Content_managment.cshtml" />
+    <Content Remove="Pages\**" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\CHANGELOG.md" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\css\perfect-scrollbar.css" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\dist\perfect-scrollbar.common.js" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\dist\perfect-scrollbar.common.js.map" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\dist\perfect-scrollbar.esm.js" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\dist\perfect-scrollbar.esm.js.map" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\dist\perfect-scrollbar.js" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\dist\perfect-scrollbar.js.map" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\dist\perfect-scrollbar.min.js" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\dist\perfect-scrollbar.min.js.map" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\LICENSE" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\package.json" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\README.md" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\src\handlers\click-rail.js" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\src\handlers\drag-thumb.js" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\src\handlers\keyboard.js" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\src\handlers\mouse-wheel.js" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\src\handlers\touch.js" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\src\index.js" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\src\lib\class-names.js" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\src\lib\css.js" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\src\lib\dom.js" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\src\lib\event-manager.js" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\src\lib\util.js" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\src\process-scroll-diff.js" />
+    <Content Include="wwwroot\node_modules\perfect-scrollbar\src\update-geometry.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\node_modules\perfect-scrollbar\types\perfect-scrollbar.d.ts" />
   </ItemGroup>
  </Project>
