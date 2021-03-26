@@ -1,38 +1,39 @@
 @model Product
 <div>
-  <div class="uk-card uk-card-default uk-card-hover uk-card-small">
-    <div class="uk-card-media-top">
-      <img src="@Url.Content(Model.ImageUrl)" alt="@Model.Name">
-    </div>
-    <div class="uk-card-body">
-      <h3 class="uk-card-title">@Model.Name</h3>
-      <h5>@Model.Description</h5>
-      <br/>
-      <br/>
-      <br/>
-    </div>
-    <div class="uk-card-footer uk-position-bottom">
-      <div class="uk-flex uk-flex-right ">
-        <div>
-          <a class="uk-button uk-button-default"
-             asp-controller="ShoppingCart"
-             asp-action="AddToShoppingCart"
-             asp-route-productId="@Model.ProductId">
-            Add to Cart
-          </a>
+    <div class="uk-card uk-card-default uk-card-hover uk-card-small">
+        <div class="uk-card-media-top">
+            <img src="@Url.Content(Model.ImageUrl)" alt="@Model.Name">
         </div>
-          <div>
-            <a class="uk-button uk-button-default"
-               asp-controller="Product"
-               asp-action="ProductDetail"
-               asp-route-productId="@Model.ProductId">
-              Details
-            </a>
+        <div class="uk-card-body">
+            <h3 class="uk-card-title">@Model.Name</h3>
+            <h5>@Model.Description</h5>
+            <br/>
+            <br/>
+            <br/>
+        </div>
+        <div class="uk-card-footer uk-position-bottom">
+            <div class="uk-flex uk-flex-right ">
+                <div>
+                    <a class="uk-icon-button uk-margin-small-right"
+                       uk-icon="cart"
+                       asp-controller="ShoppingCart"
+                       asp-action="AddToShoppingCart"
+                       asp-route-productId="@Model.ProductId">
+                    </a>
+                </div>
+                <div>
+                    <a class="uk-icon-button uk-margin-small-right"
+                       uk-icon="list"
+                       asp-controller="Product"
+                       asp-action="ProductDetail"
+                       asp-route-productId="@Model.ProductId">
+
+                    </a>
+                </div>
+                <div>
+                    <h3 class="uk-text-right">@Model.Price.ToString("C")</h3>
+                </div>
             </div>
-        <div>
-          <h3 class="uk-text-right">@Model.Price.ToString("C")</h3>
         </div>
-      </div>
     </div>
-  </div>
 </div>

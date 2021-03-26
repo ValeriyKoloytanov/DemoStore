@@ -1,24 +1,25 @@
 ﻿@model Product
-<br>
-
+<hr class="uk-divider-icon">
+<h3 class="uk-text-center">@Model.Name</h3>
+<div class="uk-flex uk-flex-center">
     <hr class="uk-divider-icon">
-    <h3 class="uk-text-center">@Model.Name</h3>
-    <p>
+    <img src="@Url.Content(Model.ImageUrl)"  height="600" width="800"  alt="...">
+    <p class="uk-margin uk-margin-left">@Model.Description</p>
   
-    </p>
-    <div class="uk-container uk-position-center-right">
-    <a class="uk-button uk-button-default"
-       asp-controller="ShoppingCart"
-       asp-action="AddToShoppingCart"
-       asp-route-productId="@Model.ProductId">
-        Add to Cart
-    </a>
-
-        @Model.Price
-    </div>
-<li>@Model.Description.</li>  
-  @for (int i=0;i< Model.Properities.Count;i++)
-            {
-                <li>@Model.Properities[i]</li>
-            }
-    
+</div>
+<div class="uk-position-bottom-right ">
+<a class="uk-button  uk-button-default"
+         asp-controller="ShoppingCart"
+         asp-action="AddToShoppingCart"
+         asp-route-productId="@Model.ProductId">
+          Add to Cart
+      </a>    
+</div>
+  
+<h3 class="uk-text-center">Properities</h3>
+<div class="uk-list  uk-margin-left uk-list-divider">
+    @for (var i = 0; i < Model.Properities.Count; i++)
+    {
+        <li>@Model.Properities[i]</li>
+    }
+</div>

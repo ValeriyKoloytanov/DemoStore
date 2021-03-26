@@ -2,41 +2,40 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace DemoStore.Models
 {
-  public class ProductRepository : IProductRepository
-  {
-    private readonly AppDbContext _appDbContext;
-
-    public ProductRepository(AppDbContext appDbContext)
+    public class ProductRepository : IProductRepository
     {
-      _appDbContext = appDbContext;
-    }
+        private readonly AppDbContext _appDbContext;
 
-    public IEnumerable<Product> Products
-    {
-      get
-      {
-        return _appDbContext.Products
-        .OrderBy(p => p.Name)
-        .Include(c => c.Category).ToList();
-      }
-    }
-    public IEnumerable<Product> FeaturedProducts
-    {
-      get
-      {
-        return _appDbContext.Products.Include(c => c.Category)
-        .Where(p => p.IsFeatured);
-      }
+        public ProductRepository(AppDbContext appDbContext)
+        {
+            _appDbContext = appDbContext;
+        }
 
-    }
+        public IEnumerable<Product> Products
+        {
+            get
+            {
+                return _appDbContext.Products
+                    .OrderBy(p => p.Name)
+                    .Include(c => c.Category).Include(c=>c.Supplier).ToList();
+            }
+        }
 
-    public Product GetProductById(int productId)
-    {
-      return _appDbContext.Products.FirstOrDefault
-      (p => p.ProductId == productId);
+        public IEnumerable<Product> FeaturedProducts
+        {
+            get
+            {
+                return _appDbContext.Products.Include(c => c.Category)
+                    .Where(p => p.IsFeatured);
+            }
+        }
+
+        public Product GetProductById(int productId)
+        {
+            return _appDbContext.Products.FirstOrDefault
+                (p => p.ProductId == productId);
+        }
     }
-  }
 }

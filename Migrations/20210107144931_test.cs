@@ -8,126 +8,126 @@ namespace DemoStore.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterColumn<int>(
-                name: "ShoppingCartItemId",
-                table: "ShoppingCartItems",
-                type: "integer",
-                nullable: false,
-                oldClrType: typeof(int),
-                oldType: "integer")
+                    "ShoppingCartItemId",
+                    "ShoppingCartItems",
+                    "integer",
+                    nullable: false,
+                    oldClrType: typeof(int),
+                    oldType: "integer")
                 .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn)
                 .OldAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn);
 
             migrationBuilder.AlterColumn<int>(
-                name: "ProductId",
-                table: "Products",
-                type: "integer",
-                nullable: false,
-                oldClrType: typeof(int),
-                oldType: "integer")
+                    "ProductId",
+                    "Products",
+                    "integer",
+                    nullable: false,
+                    oldClrType: typeof(int),
+                    oldType: "integer")
                 .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn)
                 .OldAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn);
 
             migrationBuilder.AlterColumn<int>(
-                name: "OrderId",
-                table: "Orders",
-                type: "integer",
-                nullable: false,
-                oldClrType: typeof(int),
-                oldType: "integer")
+                    "OrderId",
+                    "Orders",
+                    "integer",
+                    nullable: false,
+                    oldClrType: typeof(int),
+                    oldType: "integer")
                 .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn)
                 .OldAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn);
 
             migrationBuilder.AlterColumn<int>(
-                name: "OrderDetailId",
-                table: "OrderDetails",
-                type: "integer",
-                nullable: false,
-                oldClrType: typeof(int),
-                oldType: "integer")
+                    "OrderDetailId",
+                    "OrderDetails",
+                    "integer",
+                    nullable: false,
+                    oldClrType: typeof(int),
+                    oldType: "integer")
                 .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn)
                 .OldAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn);
 
             migrationBuilder.AlterColumn<int>(
-                name: "CategoryId",
-                table: "Categories",
-                type: "integer",
-                nullable: false,
-                oldClrType: typeof(int),
-                oldType: "integer")
+                    "CategoryId",
+                    "Categories",
+                    "integer",
+                    nullable: false,
+                    oldClrType: typeof(int),
+                    oldType: "integer")
                 .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn)
                 .OldAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn);
 
             migrationBuilder.AlterColumn<string>(
-                name: "Name",
-                table: "AspNetUserTokens",
-                type: "text",
+                "Name",
+                "AspNetUserTokens",
+                "text",
                 nullable: false,
                 oldClrType: typeof(string),
                 oldType: "character varying(128)",
                 oldMaxLength: 128);
 
             migrationBuilder.AlterColumn<string>(
-                name: "LoginProvider",
-                table: "AspNetUserTokens",
-                type: "text",
+                "LoginProvider",
+                "AspNetUserTokens",
+                "text",
                 nullable: false,
                 oldClrType: typeof(string),
                 oldType: "character varying(128)",
                 oldMaxLength: 128);
 
             migrationBuilder.AddColumn<string>(
-                name: "FirstName",
-                table: "AspNetUsers",
-                type: "text",
+                "FirstName",
+                "AspNetUsers",
+                "text",
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
-                name: "LastName",
-                table: "AspNetUsers",
-                type: "text",
+                "LastName",
+                "AspNetUsers",
+                "text",
                 nullable: true);
 
             migrationBuilder.AddColumn<byte[]>(
-                name: "ProfilePicture",
-                table: "AspNetUsers",
-                type: "bytea",
+                "ProfilePicture",
+                "AspNetUsers",
+                "bytea",
                 nullable: true);
 
             migrationBuilder.AlterColumn<string>(
-                name: "ProviderKey",
-                table: "AspNetUserLogins",
-                type: "text",
+                "ProviderKey",
+                "AspNetUserLogins",
+                "text",
                 nullable: false,
                 oldClrType: typeof(string),
                 oldType: "character varying(128)",
                 oldMaxLength: 128);
 
             migrationBuilder.AlterColumn<string>(
-                name: "LoginProvider",
-                table: "AspNetUserLogins",
-                type: "text",
+                "LoginProvider",
+                "AspNetUserLogins",
+                "text",
                 nullable: false,
                 oldClrType: typeof(string),
                 oldType: "character varying(128)",
                 oldMaxLength: 128);
 
             migrationBuilder.AlterColumn<int>(
-                name: "Id",
-                table: "AspNetUserClaims",
-                type: "integer",
-                nullable: false,
-                oldClrType: typeof(int),
-                oldType: "integer")
+                    "Id",
+                    "AspNetUserClaims",
+                    "integer",
+                    nullable: false,
+                    oldClrType: typeof(int),
+                    oldType: "integer")
                 .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn)
                 .OldAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn);
 
             migrationBuilder.AlterColumn<int>(
-                name: "Id",
-                table: "AspNetRoleClaims",
-                type: "integer",
-                nullable: false,
-                oldClrType: typeof(int),
-                oldType: "integer")
+                    "Id",
+                    "AspNetRoleClaims",
+                    "integer",
+                    nullable: false,
+                    oldClrType: typeof(int),
+                    oldType: "integer")
                 .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn)
                 .OldAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn);
         }
@@ -135,120 +135,120 @@ namespace DemoStore.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "FirstName",
-                table: "AspNetUsers");
+                "FirstName",
+                "AspNetUsers");
 
             migrationBuilder.DropColumn(
-                name: "LastName",
-                table: "AspNetUsers");
+                "LastName",
+                "AspNetUsers");
 
             migrationBuilder.DropColumn(
-                name: "ProfilePicture",
-                table: "AspNetUsers");
+                "ProfilePicture",
+                "AspNetUsers");
 
             migrationBuilder.AlterColumn<int>(
-                name: "ShoppingCartItemId",
-                table: "ShoppingCartItems",
-                type: "integer",
-                nullable: false,
-                oldClrType: typeof(int),
-                oldType: "integer")
+                    "ShoppingCartItemId",
+                    "ShoppingCartItems",
+                    "integer",
+                    nullable: false,
+                    oldClrType: typeof(int),
+                    oldType: "integer")
                 .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
                 .OldAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
             migrationBuilder.AlterColumn<int>(
-                name: "ProductId",
-                table: "Products",
-                type: "integer",
-                nullable: false,
-                oldClrType: typeof(int),
-                oldType: "integer")
+                    "ProductId",
+                    "Products",
+                    "integer",
+                    nullable: false,
+                    oldClrType: typeof(int),
+                    oldType: "integer")
                 .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
                 .OldAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
             migrationBuilder.AlterColumn<int>(
-                name: "OrderId",
-                table: "Orders",
-                type: "integer",
-                nullable: false,
-                oldClrType: typeof(int),
-                oldType: "integer")
+                    "OrderId",
+                    "Orders",
+                    "integer",
+                    nullable: false,
+                    oldClrType: typeof(int),
+                    oldType: "integer")
                 .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
                 .OldAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
             migrationBuilder.AlterColumn<int>(
-                name: "OrderDetailId",
-                table: "OrderDetails",
-                type: "integer",
-                nullable: false,
-                oldClrType: typeof(int),
-                oldType: "integer")
+                    "OrderDetailId",
+                    "OrderDetails",
+                    "integer",
+                    nullable: false,
+                    oldClrType: typeof(int),
+                    oldType: "integer")
                 .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
                 .OldAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
             migrationBuilder.AlterColumn<int>(
-                name: "CategoryId",
-                table: "Categories",
-                type: "integer",
-                nullable: false,
-                oldClrType: typeof(int),
-                oldType: "integer")
+                    "CategoryId",
+                    "Categories",
+                    "integer",
+                    nullable: false,
+                    oldClrType: typeof(int),
+                    oldType: "integer")
                 .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
                 .OldAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
             migrationBuilder.AlterColumn<string>(
-                name: "Name",
-                table: "AspNetUserTokens",
-                type: "character varying(128)",
+                "Name",
+                "AspNetUserTokens",
+                "character varying(128)",
                 maxLength: 128,
                 nullable: false,
                 oldClrType: typeof(string),
                 oldType: "text");
 
             migrationBuilder.AlterColumn<string>(
-                name: "LoginProvider",
-                table: "AspNetUserTokens",
-                type: "character varying(128)",
+                "LoginProvider",
+                "AspNetUserTokens",
+                "character varying(128)",
                 maxLength: 128,
                 nullable: false,
                 oldClrType: typeof(string),
                 oldType: "text");
 
             migrationBuilder.AlterColumn<string>(
-                name: "ProviderKey",
-                table: "AspNetUserLogins",
-                type: "character varying(128)",
+                "ProviderKey",
+                "AspNetUserLogins",
+                "character varying(128)",
                 maxLength: 128,
                 nullable: false,
                 oldClrType: typeof(string),
                 oldType: "text");
 
             migrationBuilder.AlterColumn<string>(
-                name: "LoginProvider",
-                table: "AspNetUserLogins",
-                type: "character varying(128)",
+                "LoginProvider",
+                "AspNetUserLogins",
+                "character varying(128)",
                 maxLength: 128,
                 nullable: false,
                 oldClrType: typeof(string),
                 oldType: "text");
 
             migrationBuilder.AlterColumn<int>(
-                name: "Id",
-                table: "AspNetUserClaims",
-                type: "integer",
-                nullable: false,
-                oldClrType: typeof(int),
-                oldType: "integer")
+                    "Id",
+                    "AspNetUserClaims",
+                    "integer",
+                    nullable: false,
+                    oldClrType: typeof(int),
+                    oldType: "integer")
                 .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
                 .OldAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
             migrationBuilder.AlterColumn<int>(
-                name: "Id",
-                table: "AspNetRoleClaims",
-                type: "integer",
-                nullable: false,
-                oldClrType: typeof(int),
-                oldType: "integer")
+                    "Id",
+                    "AspNetRoleClaims",
+                    "integer",
+                    nullable: false,
+                    oldClrType: typeof(int),
+                    oldType: "integer")
                 .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
                 .OldAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
         }

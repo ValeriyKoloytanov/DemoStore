@@ -9,8 +9,8 @@ namespace DemoStore.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Orders",
-                columns: table => new
+                "Orders",
+                table => new
                 {
                     OrderId = table.Column<int>(nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
@@ -27,14 +27,11 @@ namespace DemoStore.Migrations
                     OrderTotal = table.Column<decimal>(nullable: false),
                     OrderPlaced = table.Column<DateTime>(nullable: false)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Orders", x => x.OrderId);
-                });
+                constraints: table => { table.PrimaryKey("PK_Orders", x => x.OrderId); });
 
             migrationBuilder.CreateTable(
-                name: "OrderDetails",
-                columns: table => new
+                "OrderDetails",
+                table => new
                 {
                     OrderDetailId = table.Column<int>(nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
@@ -47,37 +44,37 @@ namespace DemoStore.Migrations
                 {
                     table.PrimaryKey("PK_OrderDetails", x => x.OrderDetailId);
                     table.ForeignKey(
-                        name: "FK_OrderDetails_Orders_OrderId",
-                        column: x => x.OrderId,
-                        principalTable: "Orders",
-                        principalColumn: "OrderId",
+                        "FK_OrderDetails_Orders_OrderId",
+                        x => x.OrderId,
+                        "Orders",
+                        "OrderId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_OrderDetails_Products_ProductId",
-                        column: x => x.ProductId,
-                        principalTable: "Products",
-                        principalColumn: "ProductId",
+                        "FK_OrderDetails_Products_ProductId",
+                        x => x.ProductId,
+                        "Products",
+                        "ProductId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_OrderDetails_OrderId",
-                table: "OrderDetails",
-                column: "OrderId");
+                "IX_OrderDetails_OrderId",
+                "OrderDetails",
+                "OrderId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_OrderDetails_ProductId",
-                table: "OrderDetails",
-                column: "ProductId");
+                "IX_OrderDetails_ProductId",
+                "OrderDetails",
+                "ProductId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "OrderDetails");
+                "OrderDetails");
 
             migrationBuilder.DropTable(
-                name: "Orders");
+                "Orders");
         }
     }
 }

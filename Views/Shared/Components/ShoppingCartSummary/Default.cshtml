@@ -3,11 +3,11 @@
 @if (Model.ShoppingCart.ShoppingCartItems.Count > 0)
 {
     <a
-       asp-controller="ShoppingCart" asp-action="Index">
+        asp-controller="ShoppingCart" asp-action="Index">
         <span data-uk-icon="icon: cart"></span>
         <p>&nbsp;</p>
-          <span id="cart-status">
+        <span id="cart-status">
             @Model.ShoppingCart.ShoppingCartItems.Count
-          </span>
+        </span>
     </a>
- }
+}

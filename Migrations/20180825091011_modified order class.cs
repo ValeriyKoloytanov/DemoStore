@@ -7,56 +7,56 @@ namespace DemoStore.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "AddressLine2",
-                table: "Orders");
+                "AddressLine2",
+                "Orders");
 
             migrationBuilder.DropColumn(
-                name: "Country",
-                table: "Orders");
+                "Country",
+                "Orders");
 
             migrationBuilder.DropColumn(
-                name: "FirstName",
-                table: "Orders");
+                "FirstName",
+                "Orders");
 
             migrationBuilder.DropColumn(
-                name: "State",
-                table: "Orders");
+                "State",
+                "Orders");
 
             migrationBuilder.RenameColumn(
-                name: "LastName",
-                table: "Orders",
-                newName: "Name");
+                "LastName",
+                "Orders",
+                "Name");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.RenameColumn(
-                name: "Name",
-                table: "Orders",
-                newName: "LastName");
+                "Name",
+                "Orders",
+                "LastName");
 
             migrationBuilder.AddColumn<string>(
-                name: "AddressLine2",
-                table: "Orders",
+                "AddressLine2",
+                "Orders",
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
-                name: "Country",
-                table: "Orders",
+                "Country",
+                "Orders",
                 maxLength: 50,
                 nullable: false,
                 defaultValue: "");
 
             migrationBuilder.AddColumn<string>(
-                name: "FirstName",
-                table: "Orders",
+                "FirstName",
+                "Orders",
                 maxLength: 50,
                 nullable: false,
                 defaultValue: "");
 
             migrationBuilder.AddColumn<string>(
-                name: "State",
-                table: "Orders",
+                "State",
+                "Orders",
                 maxLength: 20,
                 nullable: true);
         }

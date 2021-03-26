@@ -6,7 +6,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="ru">
 <head>
     <title></title>
 </head>
@@ -21,7 +21,9 @@
             <th class="uk-text-right">Decription</th>
             <th class="uk-text-right">Price</th>
             <th class="uk-text-right">Category</th>
-            <th> <a  asp-controller="Product" asp-action="Create" class="btn btn-ghost-primary">Add</a> </th>
+            <th>
+                <a asp-controller="Product" asp-action="Create" class="btn btn-ghost-primary">Add</a>
+            </th>
 
         </tr>
         </thead>
@@ -30,24 +32,25 @@
         {
             <tr>
                 <td>
-                    <img src="@Url.Content(@line.ImageUrl)" alt="@line.Name"  class="img-thumbnail">
+                    <img src="@Url.Content(line.ImageUrl)" alt="@line.Name" class="img-thumbnail" height="800" width="600">
                 </td>
                 <td>@line.Name</td>
                 <td class="uk-text-right">@line.Description</td>
                 <td class="uk-text-right">@line.Price</td>
                 <td class="uk-text-right">@line.Category.CategoryName</td>
                 <td>
-                    <a asp-controller="Product" asp-action="Edit" asp-route-id="@line.ProductId"class="btn btn-ghost-secondary">Edit</a>
-                    <a  asp-controller="Product" asp-action="Delete" asp-route-id="@line.ProductId"class="btn btn-ghost-danger">Delete</a>
+                    <a asp-controller="Product" asp-action="Edit" asp-route-id="@line.ProductId" class="btn btn-ghost-secondary">Edit</a>
+                    <a asp-controller="Product" asp-action="Delete" asp-route-id="@line.ProductId" class="btn btn-ghost-danger">Delete</a>
                 </td>
                 <td>
                 </td>
             </tr>
         }
+        </tbody>
         <tfoot>
         </tfoot>
-        </tbody>
-    </table>
+        </table>
+    
 </div>
 </body>
 </html>

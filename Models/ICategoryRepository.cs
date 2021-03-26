@@ -4,6 +4,6 @@ namespace DemoStore.Models
 {
     public interface ICategoryRepository
     {
-      IEnumerable<Category> GetCategories();
+        IEnumerable<Category> GetCategories();
     }
 }

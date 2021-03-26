@@ -8,8 +8,8 @@ namespace DemoStore.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "ShoppingCartItems",
-                columns: table => new
+                "ShoppingCartItems",
+                table => new
                 {
                     ShoppingCartItemId = table.Column<int>(nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
@@ -21,23 +21,23 @@ namespace DemoStore.Migrations
                 {
                     table.PrimaryKey("PK_ShoppingCartItems", x => x.ShoppingCartItemId);
                     table.ForeignKey(
-                        name: "FK_ShoppingCartItems_Products_ProductId",
-                        column: x => x.ProductId,
-                        principalTable: "Products",
-                        principalColumn: "ProductId",
+                        "FK_ShoppingCartItems_Products_ProductId",
+                        x => x.ProductId,
+                        "Products",
+                        "ProductId",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_ShoppingCartItems_ProductId",
-                table: "ShoppingCartItems",
-                column: "ProductId");
+                "IX_ShoppingCartItems_ProductId",
+                "ShoppingCartItems",
+                "ProductId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ShoppingCartItems");
+                "ShoppingCartItems");
         }
     }
 }

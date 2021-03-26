@@ -3,46 +3,59 @@
 <br>
 <div class="uk-flex uk-flex-center">
 
-<br>
+    <br>
 
-<form asp-controller="Account" asp-action="Register" method="post" role="form" class="uk-form-stacked">
+    <form asp-controller="Account" asp-action="Register" method="post" role="form" class="uk-form-stacked">
 
-<div asp-validation-summary="All" class="uk-text-danger"></div>
+        <div asp-validation-summary="All" class="uk-text-danger"></div>
 
 
-<h2 class="uk-legend">Please register..</h2>
-  <input type="hidden" asp-for="ReturnUrl" />
+        <h2 class="uk-legend">Please register..</h2>
+        <input type="hidden" asp-for="ReturnUrl"/>
 
-    <label class="uk-form-label" for="email">Email</label>
-    <div class="uk-margin">
-        <div class="uk-inline">
-            <span class="uk-form-icon" uk-icon="icon: mail"></span>
-            <input class="uk-input" type="text" id="email" asp-for="Email">
+        <label class="uk-form-label" for="email">Email</label>
+        <div class="uk-margin">
+            <div class="uk-inline">
+                <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                <input class="uk-input" type="text" id="email" asp-for="Email">
+            </div>
         </div>
-    </div>
-  <label class="uk-form-label" for="password">Username</label>
-     <div class="uk-margin">
-         <div class="uk-inline">
-             <span class="uk-form-icon uk-form-icon" uk-icon="icon: user"></span>
-             <input class="uk-input" type="login" id="log" asp-for="Username">
-         </div>
-     </div>
-
-    <label class="uk-form-label" for="password">Password</label>
-    <div class="uk-margin">
-        <div class="uk-inline">
-            <span class="uk-form-icon uk-form-icon" uk-icon="icon: lock"></span>
-            <input class="uk-input" type="password" id="password" asp-for="Password">
+        <label class="uk-form-label" for="password">First Name</label>
+        <div class="uk-margin">
+            <div class="uk-inline">
+                <span class="uk-form-icon uk-form-icon" uk-icon="icon: user"></span>
+                <input class="uk-input" type="text"  asp-for="First_Name">
+            </div>
         </div>
-    </div>
- <label class="uk-form-label" for="password">Confirm Password</label>
-    <div class="uk-margin">
-        <div class="uk-inline">
-            <span class="uk-form-icon uk-form-icon" uk-icon="icon: lock"></span>
-            <input class="uk-input" type="password" id="confirm password" asp-for="ConfirmPassword">
+         <label class="uk-form-label" for="password">Last Name</label>
+                <div class="uk-margin">
+                    <div class="uk-inline">
+                        <span class="uk-form-icon uk-form-icon" uk-icon="icon: user"></span>
+                        <input class="uk-input" type="text"  asp-for="Last_Name">
+                    </div>
+                </div>
+        <div class="uk-margin">
+            <div class="uk-inline">
+                <span class="uk-form-icon uk-form-icon" uk-icon="icon: user"></span>
+                <input class="uk-input" type="login" id="log" asp-for="Username">
+            </div>
         </div>
-    </div>
-    <input type="submit" class="uk-button uk-button-default uk-width-1-1" value="Register" />
-</form>
+        
+        <label class="uk-form-label" for="password">Password</label>
+        <div class="uk-margin">
+            <div class="uk-inline">
+                <span class="uk-form-icon uk-form-icon" uk-icon="icon: lock"></span>
+                <input class="uk-input" type="password" id="password" asp-for="Password">
+            </div>
+        </div>
+        <label class="uk-form-label" for="password">Confirm Password</label>
+        <div class="uk-margin">
+            <div class="uk-inline">
+                <span class="uk-form-icon uk-form-icon" uk-icon="icon: lock"></span>
+                <input class="uk-input" type="password" id="confirm password" asp-for="ConfirmPassword">
+            </div>
+        </div>
+        <input type="submit" class="uk-button uk-button-default uk-width-1-1" value="Register"/>
+    </form>
 
 </div>

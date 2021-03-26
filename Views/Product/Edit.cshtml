@@ -2,84 +2,93 @@
 
 @{
     Layout = "_LayoutDashboard";
+    ViewBag.Title = "Edit properities";
+    
 }
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/html">
-<head>
-    <title></title>
-</head>
-<body>
 <div>
     @using (Html.BeginForm("Edit", "Product", "@Model.product.ProductId", FormMethod.Post))
     {
-        <div class="form-group">
-            <label class="uk-form-label" for="form-horizontal-text">Name</label>
-            <div class="uk-form-controls">
-                <input asp-for="product.Name" class="form-control form-control-sm" id="form-horizontal-text" type="text" placeholder="Some text...">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Name</label>
+                <input asp-for="product.Name" type="text" class="form-control" placeholder="Name">
             </div>
-        </div>
-
-        <div class="form-group">
-            <label class="uk-form-label" for="form-horizontal-text">Description</label>
-            <div class="uk-form-controls">
-                <input asp-for="product.Description" class="form-control form-control-sm" id="form-horizontal-text" type="text" placeholder="Some text...">
+            <div class="form-group col-md-6">
+                <label>Price</label>
+                <input asp-for="product.Price" type="text" class="form-control" placeholder="price">
             </div>
         </div>
         <div class="form-group">
-            <label class="uk-form-label" for="form-horizontal-text">Price</label>
-            <div class="uk-form-controls">
-                <input asp-for="product.Price" class="form-control form-control-sm" id="form-horizontal-text" type="text" placeholder="Some text...">
-            </div>
+            <label>Description</label>
+            <input asp-for="product.Description" class="form-control form-control-sm" id="form-horizontal-text" type="text" placeholder="Some text...">
+        </div>
+        <div class="form-group col-md-4">
+            <label>Categories</label>
+            <select class="form-control" asp-for="product.CategoryId" asp-items="ViewBag.Categories as SelectList"></select>
         </div>
         <div class="form-group">
-            <label class="uk-form-label" for="form-horizontal-text">Price</label>
-            <div class="uk-form-controls">
-                @for (int i = 0; i < Model.product.Properities.Count; i++)
+            <div class="form-check">
+                <input asp-for="product.IsFeatured" class="checkbox" type="checkbox">
+                <label class="form-check-label">
+                    Check me out
+                </label>
+            </div>
+        </div>
+        <div class="uk-form-controls">
+            <input asp-for="product.ProductId" class="form-control form-control-sm" id="form-horizontal-text" type="hidden" placeholder="Some text..." value="@Model.product.ProductId">
+        </div>
+        <label class="uk-form-label" for="form-horizontal-text">Properities</label>
+        <div class="form-group">
+            @if (Model.product.Properities != null)
+            {
+                for (var i = 0; i < Model.product.Properities.Count; i++)
                 {
-                    <input asp-for="product.Properities[i]" class="form-control form-control-sm" id="form-horizontal-text" type="text" placeholder="Some text...">
-
-                    <button
-                        asp-controller="Product" asp-action="delete_prop"
-                        asp-route-id="@Model.product.ProductId"
-                        asp-route-i="@i"
-
-                        class="uk-button uk-button-primary  uk-width-1-2">
-                        delete
-                    </button>
+                    <div class="input-group">
+                        <input asp-for="product.Properities[i]" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button
+                                asp-controller="Product" asp-action="delete_prop"
+                                asp-route-id="@Model.product.ProductId"
+                                asp-route-i="@i"
+                                class="btn btn-pill btn-danger">
+                                delete
+                            </button>
+                            <button
+                                asp-controller="Product" asp-action="add"
+                                asp-route-id="@Model.product.ProductId"
+                                class="btn btn-pill btn-primary">
+                                Ok
+                            </button>
+                        </div>
+                    </div>
                 }
+            }
                 <button
                     asp-controller="Product" asp-action="new_property"
                     asp-route-id="@Model.product.ProductId"
-                    class="uk-button uk-button-primary  uk-width-1-2">
+                                class="uk-button uk-button-primary  uk-width-1-2">
                     new
-                </button>
-            </div>
+                    </button>
+            <button
+                asp-controller="Product" asp-action="Edit"
+                class="btn btn-square btn-primary">
+                Edit
+            </button>
         </div>
-        <div class="form-group">
-            <div class="uk-form-controls">
-                <input asp-for="product.ProductId" class="form-control form-control-sm" id="form-horizontal-text" type="hidden" placeholder="Some text..." value="@Model.product.ProductId">
-            </div>
-        </div>
-        <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-            <label class="uk-form-label" for="form-horizontal-text">is_featured</label>
-            <input asp-for="product.IsFeatured"class="uk-checkbox" type="checkbox">
-        </div>
-        <div class="form-group">
-            <Label class="uk-form-label" for="form-horizontal-text">Category</label>
-            <select class="form-control" asp-for="product.CategoryId" asp-items="ViewBag.Categories as SelectList"></select>
-        </div>
-        <div class="custom-file">
-            <input asp-for="product.Image" type="file" class="custom-file-input" id="customFile">
-            <label class="custom-file-label" for="customFile">Choose file</label>
-        </div>
-
-        <button
-            asp-controller="Product" asp-action="Edit"
-            class="uk-button uk-button-primary  uk-width-1-2">
-            Edit
-        </button>
     }
 </div>
-</body>
-</html>
+<label class="uk-form-label" for="form-horizontal-text">Image</label>
+<form asp-action="Upload" asp-controller="Product" method="post" enctype="multipart/form-data">
+    <div class="custom-file w-25">
+        <input type="file" class="custom-file-input" id="customFile" name="file">
+        <label class="custom-file-label" for="customFile">Choose file</label>
+        <input class="btn btn-square btn-primary" type="submit" value="Загрузить"/>
+        @Html.HiddenFor(m => m.product.ProductId)
+    </div>
+</form>
+<script>
+$(".custom-file-input").on("change", function() {
+  let fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>

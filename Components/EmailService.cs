@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using MailKit.Net.Smtp;
 using MimeKit;
+using MimeKit.Text;
 
 namespace DemoStore.Components
 {
@@ -13,14 +14,13 @@ namespace DemoStore.Components
             emailMessage.From.Add(new MailboxAddress("Администрация сайта", "admin@metanit.com"));
             emailMessage.To.Add(new MailboxAddress("", email));
             emailMessage.Subject = subject;
-            emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html)
+            emailMessage.Body = new TextPart(TextFormat.Html)
             {
                 Text = message
             };
 
             using (var client = new SmtpClient())
             {
-                
                 await client.ConnectAsync("127.0.0.1", 25, false);
                 client.Authenticate("webmaster@grocerystore.com", "admin");
                 await client.SendAsync(emailMessage);

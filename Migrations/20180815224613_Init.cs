@@ -8,21 +8,18 @@ namespace DemoStore.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Categories",
-                columns: table => new
+                "Categories",
+                table => new
                 {
                     CategoryId = table.Column<int>(nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     CategoryName = table.Column<string>(nullable: true)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Categories", x => x.CategoryId);
-                });
+                constraints: table => { table.PrimaryKey("PK_Categories", x => x.CategoryId); });
 
             migrationBuilder.CreateTable(
-                name: "Products",
-                columns: table => new
+                "Products",
+                table => new
                 {
                     ProductId = table.Column<int>(nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
@@ -37,26 +34,26 @@ namespace DemoStore.Migrations
                 {
                     table.PrimaryKey("PK_Products", x => x.ProductId);
                     table.ForeignKey(
-                        name: "FK_Products_Categories_CategoryId",
-                        column: x => x.CategoryId,
-                        principalTable: "Categories",
-                        principalColumn: "CategoryId",
+                        "FK_Products_Categories_CategoryId",
+                        x => x.CategoryId,
+                        "Categories",
+                        "CategoryId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_CategoryId",
-                table: "Products",
-                column: "CategoryId");
+                "IX_Products_CategoryId",
+                "Products",
+                "CategoryId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Products");
+                "Products");
 
             migrationBuilder.DropTable(
-                name: "Categories");
+                "Categories");
         }
     }
 }

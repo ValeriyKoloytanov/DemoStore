@@ -2,40 +2,40 @@ using System;
 
 namespace DemoStore.Models
 {
-  public class OrderRespository : IOrderRepository
-  {
-    private readonly AppDbContext _appDbContext;
-    private readonly ShoppingCart _shoppingCart;
-
-    public OrderRespository(AppDbContext appDbContext, ShoppingCart shoppingCart)
+    public class OrderRespository : IOrderRepository
     {
-      _appDbContext = appDbContext;
-      _shoppingCart = shoppingCart;
-    }
+        private readonly AppDbContext _appDbContext;
+        private readonly ShoppingCart _shoppingCart;
 
-    public void CreateOrder(Order order)
-    {
-      order.OrderPlaced = DateTime.Now;
-      order.OrderTotal = _shoppingCart.GetShoppingCartTotal();
-
-      _appDbContext.Orders.Add(order);
-      _appDbContext.SaveChanges();
-      var shoppingCartItems = _shoppingCart.ShoppingCartItems;
-
-      foreach (var shoppingCartItem in shoppingCartItems)
-      {
-        var orderDetail = new OrderDetail()
+        public OrderRespository(AppDbContext appDbContext, ShoppingCart shoppingCart)
         {
-          Amount = shoppingCartItem.Amount,
-          ProductId = shoppingCartItem.Product.ProductId,
-          OrderId = order.OrderId,
-          Price = shoppingCartItem.Product.Price
-        };
-        shoppingCartItem.Product.Ammaval= shoppingCartItem.Product.Ammaval-shoppingCartItem.Amount;    
-        _appDbContext.OrderDetails.Add(orderDetail);
-      }
+            _appDbContext = appDbContext;
+            _shoppingCart = shoppingCart;
+        }
 
-      _appDbContext.SaveChanges();
+        public void CreateOrder(Order order)
+        {
+            order.OrderPlaced = DateTime.Now;
+            order.OrderTotal = _shoppingCart.GetShoppingCartTotal();
+
+            _appDbContext.Orders.Add(order);
+            _appDbContext.SaveChanges();
+            var shoppingCartItems = _shoppingCart.ShoppingCartItems;
+
+            foreach (var shoppingCartItem in shoppingCartItems)
+            {
+                var orderDetail = new OrderDetail
+                {
+                    Amount = shoppingCartItem.Amount,
+                    ProductId = shoppingCartItem.Product.ProductId,
+                    OrderId = order.OrderId,
+                    Price = shoppingCartItem.Product.Price
+                };
+                shoppingCartItem.Product.Ammaval = shoppingCartItem.Product.Ammaval - shoppingCartItem.Amount;
+                _appDbContext.OrderDetails.Add(orderDetail);
+            }
+
+            _appDbContext.SaveChanges();
+        }
     }
-  }
 }

@@ -1,35 +1,48 @@
-﻿@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityRole>
+﻿@model User_and_roles
 
 @{
     Layout = "_LayoutDashboard";
 }
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>title</title>
 </head>
 <body>
 <div>
-<h2>Список ролей</h2>
-<table class="table">
-    @foreach (var role in Model)
-    {
-        <tr>
-            <td>@role.Name</td>
-            <td>
-                <form asp-action="Delete" asp-route-id="@role.Id" method="post">
-                    <button type="submit" class="uk-button uk-button-default" >
-                        Удалить
-                    </button>
-                </form>
-            </td>
-        </tr>
-    }
-</table>
-<a asp-action="Create">Добавить роль</a>
-<a asp-action="UserList">Список пользователей</a>
-</div>
+    <h2>Список ролей</h2>
+    <table class="table">
+        @foreach (var role in Model.Roles)
+        {
+            <tr>
+                <td>@role.Name</td>
+                <td>
+                    <form asp-action="Delete" asp-route-id="@role.Id" method="post">
+                        <button type="submit" class="uk-button uk-button-default">
+                            Delete
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </table>
+    <a asp-action="Create">Add role</a>
+    <div>
+        <h2>Список пользователей</h2>
+        <table class="table">
+            @foreach (var user in Model.users)
+            {
+                <tr>
+                    <td>@user.Email</td>
+                    <td>
+                        <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-userid="@user.Id">Acess Rights</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    </div>
 </body>
 
 

@@ -2,13 +2,13 @@
 
 namespace DemoStore.Controllers
 {
-  public class ContactController : Controller
-  {
-    // GET
-    public IActionResult Index()
+    public class ContactController : Controller
     {
-      return
-      View();
+        // GET
+        public IActionResult Index()
+        {
+            return
+                View();
+        }
     }
-  }
 }
