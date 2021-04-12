@@ -6,7 +6,7 @@ namespace DemoStore.ViewModels
     public class CommonViewModel
     {
         public Product product { get; set; }
+        public IEnumerable<InventoryApplication> applies { get; set; }
         public IEnumerable<Product> Products { get; set; }
-        public ProductViewModel ProductView { get; set; }
     }
 }

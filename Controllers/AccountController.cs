@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using DemoStore.Components;
@@ -12,15 +13,17 @@ namespace DemoStore.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        private readonly AppDbContext _appDbContext;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly UserManager<AppUser> _userManager;
 
-        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager,AppDbContext appDbContext)
         {
             _userManager = userManager;
             _signInManager = signInManager;
-        }
+            _appDbContext = appDbContext;
 
+        }
         [AllowAnonymous]
         public IActionResult Login(string returnUrl)
         {
@@ -69,7 +72,7 @@ namespace DemoStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new AppUser {UserName = registerViewModel.Username, Email = registerViewModel.Email, FirstName = registerViewModel.First_Name,LastName = registerViewModel.Last_Name};
+                var user = new AppUser {  UserName = registerViewModel.Username, Email = registerViewModel.Email, FirstName = registerViewModel.First_Name,LastName = registerViewModel.Last_Name};
                 var result = await _userManager.CreateAsync(user, registerViewModel.Password);
 
                 if (result.Succeeded) return RedirectToAction("Login", "Account");
@@ -93,13 +96,22 @@ namespace DemoStore.Controllers
             return View();
         }
 
-        public async Task<IActionResult>   Profile()
+        public async Task<IActionResult> Profile()
         {
             var currentUser = await _userManager.GetUserAsync(User);
+            var Orders = _appDbContext.Orders.Where(p => p.Email == currentUser.Email);
 
-            return View(currentUser);
+
+            return View(new ProfileViewModel()
+                {
+                    User = currentUser,
+                    Orders = Orders
+                    
+
+                }
+            );
         }
-
+     
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -116,7 +128,7 @@ namespace DemoStore.Controllers
                 var emailService = new EmailService();
                 await emailService.SendEmailAsync(model.Email, "Reset Password",
                     $"reset <a href='{callbackUrl}'>link</a>");
-                return View("ForgotPasswordConfirmation");
+                return Redirect(callbackUrl);
             }
 
             return View(model);
@@ -124,7 +136,7 @@ namespace DemoStore.Controllers
 
         [HttpGet]
         [AllowAnonymous]
-        public IActionResult ResetPassword(string code = null)
+        public IActionResult ResetPassword(string code =null)
         {
             return code == null ? View("ResetPasswordConfirmation") : View();
         }

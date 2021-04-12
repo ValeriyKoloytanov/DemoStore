@@ -1,4 +1,7 @@
-﻿@model Product
+﻿@{
+    ViewData["Title"] = @Model.Name;
+}
+@model Product
 <hr class="uk-divider-icon">
 <h3 class="uk-text-center">@Model.Name</h3>
 <div class="uk-flex uk-flex-center">
@@ -12,11 +15,11 @@
          asp-controller="ShoppingCart"
          asp-action="AddToShoppingCart"
          asp-route-productId="@Model.ProductId">
-          Add to Cart
+        Добавить в корзину
       </a>    
 </div>
   
-<h3 class="uk-text-center">Properities</h3>
+<h3 class="uk-text-center">Детали</h3>
 <div class="uk-list  uk-margin-left uk-list-divider">
     @for (var i = 0; i < Model.Properities.Count; i++)
     {

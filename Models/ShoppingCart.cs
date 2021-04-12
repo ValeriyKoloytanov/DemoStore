@@ -50,7 +50,7 @@ namespace DemoStore.Models
 
                 _appDbContext.ShoppingCartItems.Add(shoppingCartItem);
             }
-            else
+            else if( shoppingCartItem.Amount<shoppingCartItem.Product.Ammaval) 
             {
                 shoppingCartItem.Amount++;
             }

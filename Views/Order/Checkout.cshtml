@@ -1,8 +1,4 @@
 @model Order
-<style>
-    .input-validation-error {border: 1px solid #f00;}
-</style>
-<br/>
 <div class="uk-container uk-align-center">
 
 
@@ -10,7 +6,7 @@
 
         <!-- <div asp-validation-summary="All" class="uk-text-danger"></div> -->
 
-        <h2 class="uk-text-center">Please fill the form to complete the order</h2>
+        <h2 class="uk-text-center">Пожалуйста,заполните форму заказа </h2>
 
         <div class="uk-margin">
             <fieldset class="uk-fieldset">
@@ -80,17 +76,17 @@
 
                 <div class="uk-form-controls">
                     <input class="uk-input" asp-for="PhoneNumber"/>
-                    <span asp-validation-for="PhoneNumber" class="uk-text-danger"></span>
+                    <span asp-validation-for="PhoneNumber" class="uk-form-danger"></span>
                 </div>
 
             </fieldset>
         </div>
 
         <div class="uk-margin">
-            <fieldset class="uk-fieldset">
+            <fieldset class="uk-fieldset uk-margin-medium-right">
 
                 <div class="uk-form-controls">
-                    <input type="submit" value="Complete Order" class="uk-button uk-button-default"/>
+                    <input type="submit" value="Далее" class="uk-button uk-button-default" />
                 </div>
 
             </fieldset>

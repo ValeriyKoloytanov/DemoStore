@@ -17,6 +17,8 @@ namespace DemoStore.Models
         {
             order.OrderPlaced = DateTime.Now;
             order.OrderTotal = _shoppingCart.GetShoppingCartTotal();
+            order.CartId = _shoppingCart.ShoppingCartId;
+
 
             _appDbContext.Orders.Add(order);
             _appDbContext.SaveChanges();
@@ -32,6 +34,7 @@ namespace DemoStore.Models
                     Price = shoppingCartItem.Product.Price
                 };
                 shoppingCartItem.Product.Ammaval = shoppingCartItem.Product.Ammaval - shoppingCartItem.Amount;
+                shoppingCartItem.Product.Sold += shoppingCartItem.Amount;
                 _appDbContext.OrderDetails.Add(orderDetail);
             }
 

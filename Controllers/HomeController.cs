@@ -17,6 +17,7 @@ namespace DemoStore.Controllers
         {
             var homeViewModel = new HomeViewModel
             {
+                
                 FeaturedProducts = _productRepository.FeaturedProducts
             };
 

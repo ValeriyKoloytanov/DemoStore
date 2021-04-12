@@ -1,69 +1,57 @@
-﻿@{
-    ViewBag.Title = "Main page";
-    
-}
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="~/img/ourStore.jpg">
-    <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="~/node_modules/coreui/coreui-icons/css/free.min.css">
     <link rel="stylesheet" href="~/node_modules/coreui/coreui-icons/css/all.min.css">
     <link rel="stylesheet" href="~/node_modules/coreui/coreui-icons/css/brand.min.css">
     <link rel="stylesheet" href="~/node_modules/coreui/coreui-icons/css/flag.min.css">
     <link rel="stylesheet" href="~/node_modules/coreui/coreui/dist/css/coreui.min.css" crossorigin="anonymous">
+        <title>@ViewBag.Title</title>
     @RenderSection("Styles", false)
 </head>
 <body class="c-app">
 <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
     <ul class="c-sidebar-nav">
         <li class="c-sidebar-nav-item">
-            <a class="c-sidebar-nav-link c-active"asp-controller="Dashboard" asp-action="Index">Dashboard<span class="badge badge-info">NEW</span></a>
+            <a class="c-sidebar-nav-link c-active"asp-controller="Dashboard" asp-action="Index">Главная</a>
         </li>
         <li class="c-sidebar-nav-item">
             <a class="c-sidebar-nav-link" asp-controller="Product" asp-action="ManageContent">
-                <i class="c-sidebar-nav-icon cib-product-hunt"></i> Manage Content
+                <i class="c-sidebar-nav-icon cil-applications"></i> Управление контентом
             </a>
         </li>
         <li class="c-sidebar-nav-item">
             <a class="c-sidebar-nav-link" asp-controller="Roles" asp-action="Index">
-                <i class="c-sidebar-nav-icon cib-product-hunt"></i> Manage Users
+                <i class="c-sidebar-nav-icon cil-people"></i> Управление пользователями
             </a>
         </li>
         <li class="c-sidebar-nav-item">
             <a class="c-sidebar-nav-link" asp-controller="Product" asp-action="Inventory">
-                <i class="c-sidebar-nav-icon cil-speedometer"></i> Suppliers
+                <i class="c-sidebar-nav-icon cil-speedometer"></i> Поставщики 
             </a>
         </li>
         <li class="c-sidebar-nav-item">
             <a class="c-sidebar-nav-link" asp-controller="Product" asp-action="Inventory">
-                <i class="c-sidebar-nav-icon cil-settings"></i> Basic settings
+                <i class="c-sidebar-nav-icon cil-cog"></i> Поставщики
             </a>
-        </li>
-    </ul>
-</div>
-<div class="c-wrapper">
-    <header class="c-header c-header-light c-header-fixed">
-        <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar" data-class="c-sidebar-show">          
-            <i class="c-sidebar-nav-icon cib-product-hunt"></i>
-        </button>
-        <ul class="c-header-nav d-md-down-none">
-            <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Dashboard</a></li>
-            <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Users</a></li>
-            <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Settings</a></li>
-        </ul>        
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-        <ul class="c-header-nav ml-2">
-            <li class="c-header-nav-item">
-                <a asp-controller="Home" asp-action="Index" class="btn btn-success"> <i class="flaticon2-pie-chart"></i> Back to the site</a>
+        </li>  
+        <li class="c-sidebar-nav-item mt-auto">
+            <a asp-controller="Home" asp-action="Index" class="c-sidebar-nav-link c-sidebar-nav-link-success">
+                <i class="c-sidebar-nav-icon cil-home"></i> Перейти на сайт</a>
             </li>
-        </ul>
-
+    </ul>
+    
+</div>
+<div class="c-wrapper c-fixed-components">
+    <header class="c-header c-header-light c-header-fixed">
+        <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar" data-class="c-sidebar-show">      
+            <i class="c-icon c-icon-lg cil-menu"></i>
+      </button>
+        <a class="c-header-brand d-lg-none mx-auto" href="#">
+              <img  src ="img/demo-logo.png" width="80" height="45" alt="Logo"></a>
     </header>
     <div class="c-body">
         <main class="c-main">

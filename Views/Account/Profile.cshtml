@@ -1,0 +1,55 @@
+﻿@model ProfileViewModel
+
+@{
+    ViewData["Title"] = "Your profile";
+    Layout = "_Layout";
+}
+<div class="uk-margin-xlarge-left uk-width-2-3">
+<form class="uk-form-stacked">
+    <label class="uk-form-label">Email</label>
+    <div class="uk-form-controls">
+        <input asp-for="User.Email" readonly class="uk-input uk-form-blank" type="text" placeholder="Some text...">
+    </div>
+    <label class="uk-form-label">Username</label>
+    <div class="uk-form-controls">
+        <input asp-for="User.UserName" readonly class="uk-input uk-form-blank" type="text" placeholder="Some text...">
+    </div>
+    <label class="uk-form-label">Password</label>
+    <div class="uk-form-controls">
+        <input asp-for="User.SecurityStamp" readonly class="uk-input uk-form-blank" type="password" placeholder="Some text...">
+           <button asp-action="ForgotPassword"  class="uk-button uk-button-default">Button</button>
+
+        </div>
+    
+</form>
+<h3 class="uk-text-center">Order History</h3>
+<table class="uk-table uk-table-divider">
+    <thead>
+    <tr>
+        <th class="uk-text-right">Id</th>
+            <th class="uk-text-right">Total sum</th>
+        <th class="uk-text-right">Order Placed</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var line in Model.Orders)
+    {
+        <tr>
+            <td class="uk-text-right">@line.OrderId</td>
+            <td class="uk-text-right">@line.OrderTotal</td>
+            <td class="uk-text-right">@line.OrderPlaced</td>
+        </tr>
+    }
+    </tbody>
+    <tfoot>
+    </tfoot>
+</table>
+<div id="my-id" uk-modal>
+<div class="uk-modal-dialog uk-modal-body">
+<h2 class="uk-modal-title"></h2>
+    
+                <button class="uk-modal-close" type="button"></button>
+        </div>
+    </div>
+</div>

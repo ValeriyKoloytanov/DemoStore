@@ -2,20 +2,19 @@
 <br>
 <div class="uk-container">
     <hr class="uk-divider-icon">
-    <h3 class="uk-text-center">Your Shopping Cart with our healty produce</h3>
+    <h3 class="uk-text-center">Корзина</h3>
     <a class="uk-icon-button  uk-margin-big-right" uk-icon="arrow-left"
        asp-controller="home" asp-action="index">
     </a>
-
-    <!-- TABLE -->
+    
     <div class="uk-overflow-auto">
         <table class="uk-table uk-table-striped uk-table-small">
             <thead>
             <tr>
-                <th>Amount</th>
-                <th>Product</th>
-                <th class="uk-text-right">Price</th>
-                <th class="uk-text-right">Subtotal</th>
+                <th>Количество</th>
+                <th>Продукт</th>
+                <th class="uk-text-right">Цена</th>
+                <th class="uk-text-right">Итога</th>
             </tr>
             </thead>
             <tbody>
@@ -23,11 +22,19 @@
             {
                 <tr>
                     <td>
-                        <a asp-controller="ShoppingCart"
-                           asp-action="AddToShoppingCart"
-                           asp-route-productId="@line.Product.ProductId" class="uk-icon-button uk-margin-small-right" uk-icon="plus-circle">
-
-                        </a>
+                        
+                        @if (line.Amount<line.Product.Ammaval)
+                        {
+                            <a asp-controller="ShoppingCart"
+                               asp-action="AddToShoppingCart"
+                               asp-route-productId="@line.Product.ProductId" class="uk-icon-button uk-margin-small-right" uk-icon="plus-circle">
+                            </a>
+                        }
+                        else
+                        {
+                            <button class="uk-icon-button uk-margin-small-right" uk-icon="plus-circle" disabled >
+                            </button>
+                        }
                         @line.Amount
                         <a asp-controller="ShoppingCart"
                            asp-action="Decrease"
@@ -38,7 +45,7 @@
                     <td class="uk-text-right">@line.Product.Price.ToString("c")</td>
                     <td class="uk-text-right">@((line.Amount * line.Product.Price).ToString("c"))</td>
                     <td>
-                        <a class="uk-icon-button uk-margin-right" uk-icon="plus-circle" asp-controller="ShoppingCart" asp-action="RemoveFromCart" asp-route-productId="@line.Product.ProductId"></a>
+                        <a class="uk-icon-button uk-margin-right" uk-icon="close" asp-controller="ShoppingCart" asp-action="RemoveFromCart" asp-route-productId="@line.Product.ProductId"></a>
                     </td>
                     <td>
                     </td>
@@ -48,7 +55,7 @@
             <tr>
                 <td></td>
                 <td></td>
-                <td class="uk-text-right uk-text-primary">Total: </td>
+                <td class="uk-text-right uk-text-primary">Итого: </td>
                 <td class="uk-text-right uk-text-primary">@Model.ShoppingCartTotal.ToString("c")</td>
             </tr>
             </tfoot>
@@ -56,20 +63,18 @@
         </table>
 
     </div>
-    <!-- TABLE -->
-
     <br>
     <br>
 
     <a class="uk-button uk-button-danger"
        asp-controller="ShoppingCart" asp-action="ClearShoppingCart">
-        Clear
+        Очистить корзину
     </a>
 
 
     <a class="uk-button uk-button-primary uk-float-right"
        asp-controller="Order" asp-action="Checkout">
-        Check out
+        Оформить заках
     </a>
 
 </div>

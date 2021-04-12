@@ -36,7 +36,7 @@ namespace DemoStore
             services.AddScoped(sp => ShoppingCart.GetCart(sp));
             services.AddTransient<IOrderRepository, OrderRespository>();
             services.AddDatabaseDeveloperPageExceptionFilter();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0).AddRazorRuntimeCompilation();
 
             services.AddMemoryCache();
             services.AddSession();
@@ -64,12 +64,13 @@ namespace DemoStore
             {
                 app.UseDeveloperExceptionPage();
                 app.UseMigrationsEndPoint();
+                
             }
+      
 
             app.UsePathBase("/gs");
             app.UseSession();
             app.UseHttpsRedirection();
-            app.UseStatusCodePages();
             app.UseStaticFiles();
 
             app.UseForwardedHeaders(new ForwardedHeadersOptions

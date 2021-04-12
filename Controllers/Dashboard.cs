@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using DemoStore.Models;
 using DemoStore.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -23,17 +24,24 @@ namespace DemoStore.Controllers
             _appDbContext = appDbContext;
             webHostEnvironment = hostEnvironment;
         }
-
+        [Route("Dashboard")]
         public IActionResult Index()
         {
             int count_users = _appDbContext.Users.Count();
             int count_pr = _appDbContext.Products.Count();
-            int Orders_count = _appDbContext.Products.Count();
+            int Orders_count = _appDbContext.Orders.Count();
+            decimal SumSold = _appDbContext.OrderDetails.Sum(order =>order.Price*order.Amount);
+
+            IEnumerable<Product>  products = _productRepository.Products.OrderBy(p => p.Name);
 
             return View(new BasicStatsViewModel
             {
                 Usercount = count_users,
-                Productscount = count_pr
+                Productscount = count_pr,
+                Orderscount = Orders_count,
+                Products = products,
+                TotalSoldSum = SumSold
+                
             });
         }
     }

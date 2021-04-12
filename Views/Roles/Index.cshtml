@@ -3,15 +3,8 @@
 @{
     Layout = "_LayoutDashboard";
 }
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>title</title>
-</head>
-<body>
+<h2 class="text-center">Список ролей</h2>
 <div>
-    <h2>Список ролей</h2>
     <table class="table">
         @foreach (var role in Model.Roles)
         {
@@ -29,7 +22,7 @@
     </table>
     <a asp-action="Create">Add role</a>
     <div>
-        <h2>Список пользователей</h2>
+        <h2 class="text-center">Список пользователей</h2>
         <table class="table">
             @foreach (var user in Model.users)
             {
@@ -42,8 +35,4 @@
             }
         </table>
     </div>
-    </div>
-</body>
-
-
-</html>
+</div>

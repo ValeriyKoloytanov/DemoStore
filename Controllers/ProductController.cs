@@ -20,16 +20,19 @@ namespace DemoStore.Controllers
         private readonly ICategoryRepository _categoryRepository;
         private readonly IProductRepository _productRepository;
         private readonly IWebHostEnvironment webHostEnvironment;
+        private readonly IInventoryApplicationRepository _inventoryRepository;
+
 
         public ProductController(IProductRepository productRepository, ICategoryRepository categoryRepository,
-            AppDbContext appDbContext, IWebHostEnvironment hostEnvironment)
+            AppDbContext appDbContext,InventoryApplicationRepository inventoryRepository, IWebHostEnvironment hostEnvironment)
         {
             _productRepository = productRepository;
             _categoryRepository = categoryRepository;
+            _inventoryRepository = inventoryRepository;
             _appDbContext = appDbContext;
             webHostEnvironment = hostEnvironment;
         }
-
+        [Route("Products/{productId}")]
         public IActionResult ProductDetail(int productId)
         {
             var product = _productRepository.Products.FirstOrDefault(p => p.ProductId == productId);
@@ -63,14 +66,14 @@ namespace DemoStore.Controllers
                 CurrentCategory = currentCategory
             });
         }
-
+        [Route("ManageContent")]
         public ViewResult ManageContent()
         {
             IEnumerable<Product> products;
             products = _productRepository.Products.OrderBy(p => p.ProductId);
 
 
-            return View("Views/Dashboard/ManageContent.cshtml", new CommonViewModel
+            return View( new CommonViewModel
                 {
                     Products = products
                 }
@@ -80,12 +83,17 @@ namespace DemoStore.Controllers
         public ViewResult Inventory()
         {
             IEnumerable<Product> products;
+            IEnumerable<InventoryApplication> inventoryApplications;
+            inventoryApplications = _inventoryRepository.Applications.OrderBy(p => p.InventoryApplicationId);
             products = _productRepository.Products.OrderBy(p => p.ProductId);
+            
 
 
             return View("Views/Suppliers/index.cshtml", new CommonViewModel
                 {
-                    Products = products
+                    Products = products,
+                    applies = inventoryApplications
+
                 }
             );
         }

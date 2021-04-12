@@ -1,6 +1,8 @@
 ﻿@model BasicStatsViewModel
 @{
     Layout = "_LayoutDashboard";
+    ViewData["Title"] = "Dashboard";
+
 }
 <div class="row">
     <div class="col-sm-6 col-lg-3">
@@ -8,19 +10,67 @@
             <div class="card-body card-body pb-0 d-flex justify-content-between align-items-start">
                 <div>
                     <div class="text-value-lg">@Model.Productscount</div>
-                    <div>Members online</div>
+                    <div> Продуктов всего </div>
                 </div>
             </div>
         </div>
     </div>
-        <div class="col-sm-6 col-lg-3">
-            <div class="card text-white bg-primary">
-                <div class="card-body card-body pb-0 d-flex justify-content-between align-items-start">
+    <div class="col-sm-6 col-lg-3">
+        <div class="card text-white bg-success">
+            <div class="card-body card-body pb-0 d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="text-value-lg">@Model.Usercount</div>
+                    <div>Пользователей зарегистреривовано </div>
                     <div>
-                        <div class="text-value-lg">@Model.Usercount</div>
-                        <div>Members online</div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+        <div class="card text-white bg-primary">
+            <div class="card-body card-body pb-0 d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="text-value-lg">@Model.Orderscount</div>
+                    <div>Заказов принято</div>
+                </div>
             </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+            <div class="card text-white bg-secondary">
+                <div class="card-body card-body pb-0 d-flex justify-content-between align-items-start">
+                    <div>
+                        <div class="text-value-lg">@Model.TotalSoldSum</div>
+                        <div>Общая выручка</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div>
+    </div>
+</div>
+<div class="table-responsive">
+    <h3 class="text-center">Продажи</h3>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Продукт</th>
+            <th>Продано</th>
+               
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var line in Model.Products)
+        {
+            <tr>
+                <td>@line.Name</td>
+                <td class="uk-text-right">@line.Sold</td>
+            </tr>
+        }
+        </tbody>
+        <tfoot>
+        </tfoot>
+    </table>
+                           
 </div>

@@ -15,6 +15,7 @@ namespace DemoStore.Models
         public bool IsFeatured { get; set; }
         public int CategoryId { get; set; }
         public int SupplierId { get; set; }
+        public int Sold { get; set; }
 
         public List<string> Properities { get; set; }
         public virtual Supplier Supplier { get; set; }
